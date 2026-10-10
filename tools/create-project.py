@@ -41,11 +41,11 @@ def button(id,text,x,y,w=220,h=64,**kwargs):return hud(id,text,x,y,w,h,type='but
 def overlay():
  return [hud('panel','',0,170,900,380,type='image',anchor='center',image='assets/panel.png'),hud('notice','',0,205,820,110,36,anchor='center'),button('resume','CONTINUAR',-250,350,240,anchor='center'),button('retry','REINICIAR',30,350,240,anchor='center'),button('menu','MENU',300,350,180,anchor='center')]
 def game_hud():
- result=[hud('score','SCORE: 000000',24,16,400),hud('time','TIME: 90',0,16,240,anchor='center'),hud('level','',24,64,650,size=22),button('pause','II',24,16,70,64,anchor='right'),hud('hint','A/D: correr • espaço: pular • Esc: pausa',180,14,850,34,20,vertical='bottom')]
- result += [button('left','',24,52,104,104,vertical='bottom',image=asset('TOUCH_LEFT')),button('right','',148,52,104,104,vertical='bottom',image=asset('TOUCH_RIGHT')),button('jump','',32,52,120,120,anchor='right',vertical='bottom',image=asset('TOUCH_JUMP'))]
+ result=[hud('score','SCORE: 000000',24,4,400,size=26),hud('time','TIME: 90',0,4,240,size=26,anchor='center'),hud('level','',24,64,650,size=22),button('pause','II',24,4,56,56,anchor='right'),hud('hint','A/D: correr • espaço: pular • Esc: pausa',180,14,850,34,20,vertical='bottom')]
+ result += [button('left','',24,12,160,160,vertical='bottom',image=asset('TOUCH_LEFT')),button('right','',200,12,160,160,vertical='bottom',image=asset('TOUCH_RIGHT')),button('jump','',24,12,160,160,anchor='right',vertical='bottom',image=asset('TOUCH_JUMP'))]
  result += overlay()+[hud('scanlines','',0,0,1280,720,type='image',image='assets/scanlines.png')]
  for h in result:
-  if h['id'] in ['panel','notice','resume','retry','menu','scanlines']:h['visible']=False
+  if h['id'] in ['panel','notice','resume','retry','menu','scanlines','level','hint']:h['visible']=False
  return result
 
 def invisible(scene,x,y,w,h,kind='terrain'):
@@ -137,7 +137,7 @@ def build_level(difficulty,index):
  player['properties']['goalScene']=str(metadata['goal-scene'])
  for name,sprite,fps,loop in [('stand','PLAYER_STAND',1,True),('walk','PLAYER_WALK',10,True),('jump','PLAYER_JUMP',1,True),('slip','PLAYER_SLIP',12,False),('hit','PLAYER_THROWBACK',15,False),('rope','PLAYER_GRABROPE',1,True),('run','PLAYER_RUN',12,True),('clean','PLAYER_CLEAN_DUNG',8,False)]:anim(player,name,sprite,fps,loop)
  scene['objects'].append(player)
- scene['camera']={'mode':'follow','targetId':'alex','x':10,'y':11.25,'width':20,'height':13.5,'followSpeed':8,'deadZoneWidth':4,'deadZoneHeight':6,'fadeSeconds':.5}
+ scene['camera']={'mode':'follow','targetId':'alex','x':10,'y':11.875,'width':20,'height':10.25,'viewportTop':64,'followSpeed':8,'deadZoneWidth':4,'deadZoneHeight':30,'fadeSeconds':.5}
  return scene
 
 scenes=[build_level(d,i) for d,count in [('normal',5),('hard',5),('super',3)] for i in range(1,count+1)]
@@ -165,6 +165,6 @@ for page,title in [('main','Título'),('difficulty','Dificuldade'),('levels','Se
 scenes=menu_scenes+scenes+[ending]
 anchor_spec=importlib.util.spec_from_file_location('hud_anchors',ROOT/'tools/hud-anchors.py');anchors=importlib.util.module_from_spec(anchor_spec);anchor_spec.loader.exec_module(anchors)
 for scene in scenes:
- for h in scene.get('hud',[]):anchors.normalize(h,scene['id'].startswith('menu') or h['id'] in ['panel','notice','resume','retry','menu','scanlines'])
+ for h in scene.get('hud',[]):anchors.normalize(h,scene['id'].startswith('menu') or h['id'] in ['panel','notice','resume','retry','menu','scanlines','level','hint'])
 (ROOT/'game.json').write_text(json.dumps({'version':1,'name':'Alex vs Bus: The Race — Megalodonte','applicationId':'megalodonte.games.alexvsbus','entrySceneId':'menu','lastEditedSceneId':'normal-1','scenes':scenes},ensure_ascii=False,indent=2)+'\n')
 print('Criadas 13 fases + 11 cenas de menus + final:',ROOT/'game.json')

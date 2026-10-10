@@ -73,3 +73,7 @@ Código/adaptação: **GPL-3.0-or-later**. Assets originais e derivados: **CC BY
 As HUDs dos menus usam âncoras relativas à área central de conteúdo: voltar é `left/top`, volume é `right/top`, títulos são `center/top`, e controles inferiores usam `bottom`. Corrida mantém seus controles nas bordas da tela segura; pausa e scanlines usam a área de conteúdo. O inspetor mostra a referência e permite alterná-la sem deslocar o elemento.
 
 A engine também permite editar as animações usadas por Alex: selecione `player` na fase e abra **Animações / prévia**. Colisores, visibilidade, espelhamento e propriedades como `kind`/`goalScene` ficam em **Colisor / propriedades**; camadas, tiles e obstáculos ficam no editor de mapa. O fluxo completo e a revisão dos campos estão em [Recursos do editor](docs/EDITOR_FEATURES.md). Os scripts continuam editáveis em Java dentro da engine.
+
+O progresso é salvo no dispositivo: Normal/fase 1 começa liberada; completar fases libera as próximas e completar uma dificuldade libera a seguinte. Moedas concedem 15 segundos a cada 1000 pontos acumulados durante a corrida. No teclado, A/D ou esquerda/direita movem Alex e espaço pula. A trilha continua entre submenus. Os controles de toque medem 160×160 na referência 1280×720; a câmera reserva uma faixa de 64 pixels para o placar.
+
+Capturas verificadas no emulador: [fases bloqueadas](docs/android-locked-levels.png) e [controles e enquadramento](docs/android-race-layout.png).

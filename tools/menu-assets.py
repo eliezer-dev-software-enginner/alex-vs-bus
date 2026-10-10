@@ -60,6 +60,10 @@ def menus(hud):
  add('main','audio',432,8,40,40,icon='MENU_AUDIO_ON')
  for page,title in [('difficulty','DIFFICULTY SELECT'),('levels','LEVEL SELECT'),('settings','SETTINGS'),('display','DISPLAY SETTINGS'),('sound','AUDIO SETTINGS'),('vscreen','VSCREEN SIZE'),('about','ABOUT'),('credits','CREDITS'),('jukebox','JUKEBOX'),('quit','QUIT?')]:header(page,title)
  for i,name in enumerate(['normal','hard','super']):add('difficulty',name,128+i*80,144,64,40,caption=name.upper(),gray=i>0)
+ for name in ['normal','hard','super']:
+  panel('difficulty-'+name+'-locked',64,40,caption=name.upper(),gray=True)
+  panel('difficulty-'+name+'-unlocked',64,40,caption=name.upper())
+ for i in range(1,6):panel('levels-level'+str(i)+'-locked',40,48,icon='MENU_LOCKED',gray=True)
  for i in range(1,6):add('levels','level'+str(i),104+(i-1)*56,144,40,48,icon='MENU_'+str(i))
  rows('settings',[('display','DISPLAY SETTINGS',''),('sound','AUDIO SETTINGS',''),('touch','TOUCHSCREEN BUTTONS','ON')])
  rows('display',[('size','VSCREEN SIZE',''),('scanlines','SCANLINES','OFF')])

@@ -2,18 +2,18 @@
   "date": "2026-10-10",
   "tests": {
     "build/test-results/test": {
-      "tests": 27,
+      "tests": 31,
       "failures": 0,
       "skipped": 1
     },
     "engine-core/build/test-results/test": {
-      "tests": 25,
+      "tests": 27,
       "failures": 0,
       "skipped": 0
     }
   },
-  "androidEmulator": "Pixel_9a_API_35 (read-only)",
-  "androidInstrumentation": "PASS: title, level select, real multitouch movement+jump, pause/resume, restart and menu",
+  "androidEmulator": "Pixel_9a_API_35 (emulator-5580, isolated test)",
+  "androidInstrumentation": "PASS: same MediaPlayer across menu subscenes, locked difficulty/levels, persisted unlock at goal, real multitouch movement+jump, pause/resume, restart and menu",
   "desktop": "Standalone Linux x86_64 launched using bundled runtime",
   "reference": {
     "repository": "https://github.com/M374LX/alexvsbus",
@@ -25,5 +25,9 @@
   "androidLint": "lintDebug successful",
   "editableMenuScenes": 11,
   "totalScenes": 25,
-  "editorCoverage": "Animações (frames, FPS, loop, spritesheet, prévia), colisores, IDs/referências, propriedades, visibilidade, flip, HUD, cenas, assets e pintura de tilemaps: docs/EDITOR_FEATURES.md na engine."
+  "editorCoverage": "Animações (frames, FPS, loop, spritesheet, prévia), colisores, IDs/referências, propriedades, visibilidade, flip, HUD, cenas, assets e pintura de tilemaps: docs/EDITOR_FEATURES.md na engine.",
+  "screenshots": [
+    "docs/android-locked-levels.png",
+    "docs/android-race-layout.png"
+  ]
 }
