@@ -83,3 +83,15 @@ O ícone original do jogo está em `assets/icon.png`, configurado em `iconAssetP
 No Android, a tela acompanha o sensor nas duas posições horizontais (`sensorLandscape`). Girar o celular mantém a corrida em andamento.
 
 Os botões de fase e dificuldade usam a propriedade booleana **`liberado`**. No editor, selecione o botão e abra **Propriedades / condições HUD → Propriedades**; marque/desmarque `liberado` e clique em **Aplicar** para visualizar número ou cadeado. A aba **Condição visual** define as duas imagens e o bloqueio do clique. Duplicações mantêm a propriedade e a condição. Fase 1/Normal começam com `true`; os demais começam com `false`. O script usa esse valor inicial e libera novos botões conforme o progresso salvo. Definir `true` no documento permite liberar uma fase inicialmente para testes ou outro fluxo de jogo.
+
+## Release Android
+
+No editor, configure **Projeto → Código da versão Android / Versão exibida** e clique em **Android Release**. Pelo terminal:
+
+```bash
+bash tools/build.sh android-release
+```
+
+Abra `build/android-release/project` no Android Studio e use **Build → Generate Signed Bundle / APK**, selecione `app`, seu keystore e a variante **release**. Escolha APK para distribuição direta ou AAB para Google Play. A exportação é independente da engine e contém os assets, scripts e ícone do jogo. Uma cópia anterior é preservada em backup ao exportar novamente.
+
+Os arquivos `game-release-unsigned.apk` e `game-release-unsigned.aab` são apenas validações sem assinatura; a distribuição exige os arquivos assinados pelo Studio. Incremente `versionCode` para cada atualização. Veja [o passo a passo completo](docs/ANDROID_RELEASE.md).
