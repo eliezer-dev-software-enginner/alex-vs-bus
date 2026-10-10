@@ -69,3 +69,7 @@ As fases, sprites, sons e músicas são os originais. A física foi convertida p
 Jogo, programação, música, efeitos e gráficos originais: **Alexandre Almeida / M374LX**, © 2021–2025. Design adicional: Hoton Bastos. Testes originais: Harim Pires. Fontes gráficas: Telegrama (YoWorks) e Press Start 2P (codeman38).
 
 Código/adaptação: **GPL-3.0-or-later**. Assets originais e derivados: **CC BY-SA 4.0**. Os textos integrais estão em licenses/ e os créditos em LICENSE.txt; avisos também acompanham os assets exportados em assets/legal/. Este é um port para a engine Megalodonte, com a origem registrada e as alterações descritas acima.
+
+As HUDs dos menus usam âncoras relativas à área central de conteúdo: voltar é `left/top`, volume é `right/top`, títulos são `center/top`, e controles inferiores usam `bottom`. Corrida mantém seus controles nas bordas da tela segura; pausa e scanlines usam a área de conteúdo. O inspetor mostra a referência e permite alterná-la sem deslocar o elemento.
+
+A engine também permite editar as animações usadas por Alex: selecione `player` na fase e abra **Animações / prévia**. Colisores, visibilidade, espelhamento e propriedades como `kind`/`goalScene` ficam em **Colisor / propriedades**; camadas, tiles e obstáculos ficam no editor de mapa. O fluxo completo e a revisão dos campos estão em [Recursos do editor](docs/EDITOR_FEATURES.md). Os scripts continuam editáveis em Java dentro da engine.

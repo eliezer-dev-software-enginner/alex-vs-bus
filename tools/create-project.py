@@ -163,5 +163,8 @@ for page,title in [('main','Título'),('difficulty','Dificuldade'),('levels','Se
  for h in screen['hud']:h['visible']=True
  menu_scenes.append(screen)
 scenes=menu_scenes+scenes+[ending]
+anchor_spec=importlib.util.spec_from_file_location('hud_anchors',ROOT/'tools/hud-anchors.py');anchors=importlib.util.module_from_spec(anchor_spec);anchor_spec.loader.exec_module(anchors)
+for scene in scenes:
+ for h in scene.get('hud',[]):anchors.normalize(h,scene['id'].startswith('menu') or h['id'] in ['panel','notice','resume','retry','menu','scanlines'])
 (ROOT/'game.json').write_text(json.dumps({'version':1,'name':'Alex vs Bus: The Race — Megalodonte','applicationId':'megalodonte.games.alexvsbus','entrySceneId':'menu','lastEditedSceneId':'normal-1','scenes':scenes},ensure_ascii=False,indent=2)+'\n')
 print('Criadas 13 fases + 11 cenas de menus + final:',ROOT/'game.json')

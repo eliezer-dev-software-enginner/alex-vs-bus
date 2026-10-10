@@ -8,7 +8,7 @@ import megalodonte.engine.*;
 public final class Menu implements GameScript {
     private String page="main",difficulty="normal";
 
-    @Override public void onStart(GameContext c){page=c.scene().id.equals("menu")?"main":c.scene().id.substring("menu-".length());difficulty=c.state().getOrDefault("difficulty","normal");c.scene().musicAssetPath=c.state().getOrDefault("menuMusic","assets/bgmtitle.mp3");c.pause(false);refresh(c);}
+    @Override public void onStart(GameContext c){page=c.scene().hud.stream().filter(h->h.id.endsWith("-back")).map(h->h.id.substring(0,h.id.length()-5)).findFirst().orElse("main");difficulty=c.state().getOrDefault("difficulty","normal");c.scene().musicAssetPath=c.state().getOrDefault("menuMusic","assets/bgmtitle.mp3");c.pause(false);refresh(c);}
     private boolean enabled(GameContext c,String key){return !c.state().getOrDefault(key,key.equals("scanlines")?"false":"true").equals("false");}
     private void sound(GameContext c){if(enabled(c,"sfx"))c.playSound("assets/select.wav");}
     private void open(GameContext c,String next){sound(c);c.changeScene(next.equals("main")?"menu":"menu-"+next);}

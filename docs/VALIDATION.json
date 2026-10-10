@@ -2,12 +2,12 @@
   "date": "2026-10-10",
   "tests": {
     "build/test-results/test": {
-      "tests": 23,
+      "tests": 27,
       "failures": 0,
       "skipped": 1
     },
     "engine-core/build/test-results/test": {
-      "tests": 23,
+      "tests": 25,
       "failures": 0,
       "skipped": 0
     }
@@ -24,5 +24,6 @@
   "menus": "Original atlas bitmap font, icons and borders; main, difficulty, level, settings, display, sound, virtual screen, jukebox, about, credits and quit. Functional settings verified in desktop and Android.",
   "androidLint": "lintDebug successful",
   "editableMenuScenes": 11,
-  "totalScenes": 25
+  "totalScenes": 25,
+  "editorCoverage": "Animações (frames, FPS, loop, spritesheet, prévia), colisores, IDs/referências, propriedades, visibilidade, flip, HUD, cenas, assets e pintura de tilemaps: docs/EDITOR_FEATURES.md na engine."
 }

@@ -26,8 +26,8 @@
           "id": "logo",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 42.666666666666664,
+          "offsetX": 0.0,
+          "offsetY": 42.666667,
           "width": 789.3333333333333,
           "height": 213.33333333333331,
           "fontSize": 30,
@@ -35,97 +35,104 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/logo_large-0.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "start",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 341.3333333333333,
+          "offsetY": 34.666667,
           "width": 256.0,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "start",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/main-start.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox",
           "type": "button",
           "text": "",
-          "offsetX": -224.0,
-          "offsetY": 490.66666666666663,
+          "offsetX": 362.666667,
+          "offsetY": 122.666667,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "jukebox",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/main-jukebox.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "settings",
           "type": "button",
           "text": "",
-          "offsetX": -74.66666666666666,
-          "offsetY": 490.66666666666663,
+          "offsetX": -74.666667,
+          "offsetY": 122.666667,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "settings",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/main-settings.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "about",
           "type": "button",
           "text": "",
-          "offsetX": 74.66666666666666,
-          "offsetY": 490.66666666666663,
+          "offsetX": 74.666667,
+          "offsetY": 122.666667,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "about",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/main-about.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "quit",
           "type": "button",
           "text": "",
-          "offsetX": 224.0,
-          "offsetY": 490.66666666666663,
+          "offsetX": 362.666667,
+          "offsetY": 122.666667,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "quit",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/main-quit.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "audio",
           "type": "button",
           "text": "",
-          "offsetX": 565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "audio",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "right",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/main-audio.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -150,23 +157,24 @@
           "id": "difficulty-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "difficulty-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/difficulty-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "difficulty-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -174,52 +182,56 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/difficulty-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "difficulty-normal",
           "type": "button",
           "text": "",
-          "offsetX": -213.33333333333331,
-          "offsetY": 384.0,
+          "offsetX": 341.333333,
+          "offsetY": 77.333333,
           "width": 170.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "difficulty-normal",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-normal.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "difficulty-hard",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 384.0,
+          "offsetY": 77.333333,
           "width": 170.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "difficulty-hard",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-hard.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "difficulty-super",
           "type": "button",
           "text": "",
-          "offsetX": 213.33333333333331,
-          "offsetY": 384.0,
+          "offsetX": 341.333333,
+          "offsetY": 77.333333,
           "width": 170.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "difficulty-super",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-super.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -244,23 +256,24 @@
           "id": "levels-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "levels-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/levels-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -268,82 +281,88 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/levels-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-level1",
           "type": "button",
           "text": "",
-          "offsetX": -309.3333333333333,
-          "offsetY": 384.0,
+          "offsetX": 277.333333,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "levels-level1",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level1.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-level2",
           "type": "button",
           "text": "",
-          "offsetX": -160.0,
-          "offsetY": 384.0,
+          "offsetX": 426.666667,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "levels-level2",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level2.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-level3",
           "type": "button",
           "text": "",
-          "offsetX": -10.666666666666666,
-          "offsetY": 384.0,
+          "offsetX": -10.666667,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "levels-level3",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level3.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-level4",
           "type": "button",
           "text": "",
-          "offsetX": 138.66666666666666,
-          "offsetY": 384.0,
+          "offsetX": 448.0,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "levels-level4",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level4.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "levels-level5",
           "type": "button",
           "text": "",
-          "offsetX": 288.0,
-          "offsetY": 384.0,
+          "offsetX": 298.666667,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "levels-level5",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level5.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -368,23 +387,24 @@
           "id": "settings-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "settings-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/settings-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "settings-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -392,52 +412,56 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/settings-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "settings-display",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 320.0,
+          "offsetY": -8.0,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "settings-display",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/settings-display.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "settings-sound",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 405.3333333333333,
+          "offsetY": 77.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "settings-sound",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/settings-sound.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "settings-touch",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 490.66666666666663,
+          "offsetY": 165.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "settings-touch",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/settings-touch.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -462,23 +486,24 @@
           "id": "display-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "display-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/display-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "display-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -486,37 +511,40 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/display-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "display-size",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 362.66666666666663,
+          "offsetY": 34.666667,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "display-size",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/display-size.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "display-scanlines",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 448.0,
+          "offsetY": 120.0,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "display-scanlines",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/display-scanlines.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -541,23 +569,24 @@
           "id": "sound-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "sound-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/sound-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "sound-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -565,52 +594,56 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/sound-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "sound-audio",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 320.0,
+          "offsetY": -8.0,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "sound-audio",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/sound-audio.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "sound-music",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 405.3333333333333,
+          "offsetY": 77.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "sound-music",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/sound-music.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "sound-sfx",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 490.66666666666663,
+          "offsetY": 165.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "sound-sfx",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/sound-sfx.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -635,23 +668,24 @@
           "id": "vscreen-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "vscreen-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/vscreen-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "vscreen-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -659,52 +693,56 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/vscreen-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "vscreen-mode",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 320.0,
+          "offsetY": -8.0,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "vscreen-mode",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/vscreen-mode.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "vscreen-width",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 405.3333333333333,
+          "offsetY": 77.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "vscreen-width",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/vscreen-width.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "vscreen-height",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 490.66666666666663,
+          "offsetY": 165.333333,
           "width": 554.6666666666666,
           "height": 64.0,
           "fontSize": 30,
           "action": "vscreen-height",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/vscreen-height.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -729,23 +767,24 @@
           "id": "jukebox-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "jukebox-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/jukebox-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -753,67 +792,72 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/jukebox-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox-track0",
           "type": "button",
           "text": "",
-          "offsetX": -234.66666666666666,
-          "offsetY": 384.0,
+          "offsetX": 352.0,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "jukebox-track0",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/jukebox-track0.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox-track1",
           "type": "button",
           "text": "",
-          "offsetX": -85.33333333333333,
-          "offsetY": 384.0,
+          "offsetX": -85.333333,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "jukebox-track1",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/jukebox-track1.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox-track2",
           "type": "button",
           "text": "",
           "offsetX": 64.0,
-          "offsetY": 384.0,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "jukebox-track2",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/jukebox-track2.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "jukebox-track3",
           "type": "button",
           "text": "",
-          "offsetX": 213.33333333333331,
-          "offsetY": 384.0,
+          "offsetX": 373.333333,
+          "offsetY": 88.0,
           "width": 106.66666666666666,
           "height": 128.0,
           "fontSize": 30,
           "action": "jukebox-track3",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/jukebox-track3.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -838,23 +882,24 @@
           "id": "about-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "about-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/about-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "about-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -862,37 +907,40 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/about-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "about-body",
           "type": "image",
           "text": "",
-          "offsetX": 10.666666666666666,
-          "offsetY": 192.0,
+          "offsetX": 10.666667,
+          "offsetY": 34.666667,
           "width": 1088.0,
           "height": 405.3333333333333,
           "fontSize": 30,
           "action": "about-body",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/about-body.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "about-credits",
           "type": "button",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 640.0,
+          "offsetY": 16.0,
           "width": 341.3333333333333,
           "height": 64.0,
           "fontSize": 30,
           "action": "about-credits",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "bottom",
           "assetPath": "assets/menu/about-credits.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -917,23 +965,24 @@
           "id": "credits-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "credits-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/credits-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "credits-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -941,22 +990,24 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/credits-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "credits-body",
           "type": "image",
           "text": "",
-          "offsetX": 10.666666666666666,
-          "offsetY": 192.0,
+          "offsetX": 10.666667,
+          "offsetY": 34.666667,
           "width": 1088.0,
           "height": 405.3333333333333,
           "fontSize": 30,
           "action": "credits-body",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/credits-body.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -981,23 +1032,24 @@
           "id": "quit-back",
           "type": "button",
           "text": "",
-          "offsetX": -565.3333333333333,
-          "offsetY": 21.333333333333332,
+          "offsetX": 21.333333,
+          "offsetY": 21.333333,
           "width": 106.66666666666666,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "quit-back",
-          "horizontalAnchor": "center",
+          "horizontalAnchor": "left",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/quit-back.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "quit-header",
           "type": "image",
           "text": "",
           "offsetX": 0.0,
-          "offsetY": 21.333333333333332,
+          "offsetY": 21.333333,
           "width": 512.0,
           "height": 106.66666666666666,
           "fontSize": 30,
@@ -1005,37 +1057,40 @@
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
           "assetPath": "assets/menu/quit-header.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "quit-yes",
           "type": "button",
           "text": "",
           "offsetX": -96.0,
-          "offsetY": 384.0,
+          "offsetY": 77.333333,
           "width": 149.33333333333331,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "quit-yes",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/quit-yes.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         },
         {
           "id": "quit-no",
           "type": "button",
           "text": "",
           "offsetX": 96.0,
-          "offsetY": 384.0,
+          "offsetY": 77.333333,
           "width": 149.33333333333331,
           "height": 106.66666666666666,
           "fontSize": 30,
           "action": "quit-no",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/menu/quit-no.png",
-          "visible": true
+          "visible": true,
+          "referenceArea": "content"
         }
       ]
     },
@@ -6388,13 +6443,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -6402,7 +6458,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -6416,7 +6473,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -6430,21 +6488,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -6458,7 +6518,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -6472,7 +6533,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -6486,97 +6548,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -19962,13 +20031,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -19976,7 +20046,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -19990,7 +20061,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -20004,21 +20076,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -20032,7 +20106,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -20046,7 +20121,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -20060,97 +20136,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -32793,13 +32876,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -32807,7 +32891,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -32821,7 +32906,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -32835,21 +32921,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -32863,7 +32951,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -32877,7 +32966,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -32891,97 +32981,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -46380,13 +46477,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -46394,7 +46492,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -46408,7 +46507,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -46422,21 +46522,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -46450,7 +46552,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -46464,7 +46567,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -46478,97 +46582,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -59393,13 +59504,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -59407,7 +59519,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -59421,7 +59534,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -59435,21 +59549,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -59463,7 +59579,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -59477,7 +59594,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -59491,97 +59609,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -74920,13 +75045,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -74934,7 +75060,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -74948,7 +75075,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -74962,21 +75090,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -74990,7 +75120,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -75004,7 +75135,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -75018,97 +75150,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -89196,13 +89335,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -89210,7 +89350,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -89224,7 +89365,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -89238,21 +89380,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -89266,7 +89410,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -89280,7 +89425,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -89294,97 +89440,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -102859,13 +103012,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -102873,7 +103027,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -102887,7 +103042,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -102901,21 +103057,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -102929,7 +103087,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -102943,7 +103102,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -102957,97 +103117,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -117213,13 +117380,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -117227,7 +117395,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -117241,7 +117410,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -117255,21 +117425,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -117283,7 +117455,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -117297,7 +117470,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -117311,97 +117485,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -130954,13 +131135,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -130968,7 +131150,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -130982,7 +131165,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -130996,21 +131180,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -131024,7 +131210,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -131038,7 +131225,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -131052,97 +131240,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -144992,13 +145187,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -145006,7 +145202,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -145020,7 +145217,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -145034,21 +145232,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -145062,7 +145262,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -145076,7 +145277,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -145090,97 +145292,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -156955,13 +157164,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -156969,7 +157179,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -156983,7 +157194,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -156997,21 +157209,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -157025,7 +157239,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -157039,7 +157254,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -157053,97 +157269,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -169767,13 +169990,14 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "time",
           "type": "text",
           "text": "TIME: 90",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 16,
           "width": 240,
           "height": 50,
@@ -169781,7 +170005,8 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "level",
@@ -169795,7 +170020,8 @@
           "action": "",
           "horizontalAnchor": "left",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "pause",
@@ -169809,21 +170035,23 @@
           "action": "pause",
           "horizontalAnchor": "right",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "hint",
           "type": "text",
           "text": "A/D: correr • espaço: pular • Esc: pausa",
-          "offsetX": 180,
+          "offsetX": -35.0,
           "offsetY": 14,
           "width": 850,
           "height": 34,
           "fontSize": 20,
           "action": "",
-          "horizontalAnchor": "left",
+          "horizontalAnchor": "center",
           "verticalAnchor": "bottom",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "left",
@@ -169837,7 +170065,8 @@
           "action": "left",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_left-0.png"
+          "assetPath": "assets/touch_left-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "right",
@@ -169851,7 +170080,8 @@
           "action": "right",
           "horizontalAnchor": "left",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_right-0.png"
+          "assetPath": "assets/touch_right-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "jump",
@@ -169865,97 +170095,104 @@
           "action": "jump",
           "horizontalAnchor": "right",
           "verticalAnchor": "bottom",
-          "assetPath": "assets/touch_jump-0.png"
+          "assetPath": "assets/touch_jump-0.png",
+          "referenceArea": "viewport"
         },
         {
           "id": "panel",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 170,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 900,
           "height": 380,
           "fontSize": 30,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "assets/panel.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "notice",
           "type": "text",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 205,
+          "offsetX": 0.0,
+          "offsetY": -100.0,
           "width": 820,
           "height": 110,
           "fontSize": 36,
           "action": "",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "resume",
           "type": "button",
           "text": "CONTINUAR",
-          "offsetX": -250,
-          "offsetY": 350,
+          "offsetX": 270.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "resume",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "left",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "retry",
           "type": "button",
           "text": "REINICIAR",
-          "offsetX": 30,
-          "offsetY": 350,
+          "offsetX": 30.0,
+          "offsetY": 22.0,
           "width": 240,
           "height": 64,
           "fontSize": 30,
           "action": "retry",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "MENU",
-          "offsetX": 300,
-          "offsetY": 350,
+          "offsetX": 250.0,
+          "offsetY": 22.0,
           "width": 180,
           "height": 64,
           "fontSize": 30,
           "action": "menu",
-          "horizontalAnchor": "center",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "right",
+          "verticalAnchor": "center",
           "assetPath": "",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         },
         {
           "id": "scanlines",
           "type": "image",
           "text": "",
-          "offsetX": 0,
-          "offsetY": 0,
+          "offsetX": 0.0,
+          "offsetY": 0.0,
           "width": 1280,
           "height": 720,
           "fontSize": 30,
           "action": "",
-          "horizontalAnchor": "left",
-          "verticalAnchor": "top",
+          "horizontalAnchor": "center",
+          "verticalAnchor": "center",
           "assetPath": "assets/scanlines.png",
-          "visible": false
+          "visible": false,
+          "referenceArea": "content"
         }
       ],
       "tileMaps": [
@@ -178227,7 +178464,7 @@
           "id": "ending-title",
           "type": "text",
           "text": "",
-          "offsetX": 0,
+          "offsetX": 0.0,
           "offsetY": 28,
           "width": 980,
           "height": 90,
@@ -178235,21 +178472,23 @@
           "action": "",
           "horizontalAnchor": "center",
           "verticalAnchor": "top",
-          "assetPath": ""
+          "assetPath": "",
+          "referenceArea": "viewport"
         },
         {
           "id": "menu",
           "type": "button",
           "text": "VOLTAR AO MENU",
-          "offsetX": 0,
-          "offsetY": 610,
+          "offsetX": 0.0,
+          "offsetY": 35,
           "width": 500,
           "height": 75,
           "fontSize": 30,
           "action": "menu",
           "horizontalAnchor": "center",
-          "verticalAnchor": "top",
-          "assetPath": ""
+          "verticalAnchor": "bottom",
+          "assetPath": "",
+          "referenceArea": "content"
         }
       ]
     }
