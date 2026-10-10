@@ -29,5 +29,6 @@
   "screenshots": [
     "docs/android-locked-levels.png",
     "docs/android-race-layout.png"
-  ]
+  ],
+  "applicationIcon": "Original 128x128 PNG verified in Desktop Linux package; Android APK contains adaptive launcher XML, foreground PNG and all five launcher density PNGs. Icon configuration and gameplay tests passed."
 }

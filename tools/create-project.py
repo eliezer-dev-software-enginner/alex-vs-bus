@@ -10,6 +10,7 @@ UP=ROOT/'upstream'; ASSETS=ROOT/'assets'; ASSETS.mkdir(exist_ok=True)
 if (ROOT/'game.json').exists() and '--force' not in sys.argv: raise SystemExit('game.json já existe. Use --force para regenerar e substituir o documento.')
 regions=json.loads((UP/'sprite-regions.json').read_text()); atlas=Image.open(UP/'assets/gfx.png').convert('RGBA')
 shutil.copy(UP/'assets/gfx.png',ASSETS/'gfx.png')
+shutil.copy(ROOT/'upstream/icons/icon128.png',ASSETS/'icon.png')
 frames={'PLAYER_WALK':6,'PLAYER_SLIP':4,'PLAYER_THROWBACK':3,'PLAYER_RUN':4,'PLAYER_CLEAN_DUNG':9,'COIN_GOLD':4,'COIN_SILVER':4,'GUSH_TOP':3,'SPRING':3,'BUS_WHEEL':3,'BUS_DOOR':4,'BUS_ROUTE':5,'CAR_WHEEL':2,'HEN':2,'BIRD':4,'FLAGMAN':4,'BEARDED_MAN_WALK':6}
 for name,(x,y,w,h) in regions.items():
  if w<=0 or h<=0:continue
@@ -166,5 +167,5 @@ scenes=menu_scenes+scenes+[ending]
 anchor_spec=importlib.util.spec_from_file_location('hud_anchors',ROOT/'tools/hud-anchors.py');anchors=importlib.util.module_from_spec(anchor_spec);anchor_spec.loader.exec_module(anchors)
 for scene in scenes:
  for h in scene.get('hud',[]):anchors.normalize(h,scene['id'].startswith('menu') or h['id'] in ['panel','notice','resume','retry','menu','scanlines','level','hint'])
-(ROOT/'game.json').write_text(json.dumps({'version':1,'name':'Alex vs Bus: The Race — Megalodonte','applicationId':'megalodonte.games.alexvsbus','entrySceneId':'menu','lastEditedSceneId':'normal-1','scenes':scenes},ensure_ascii=False,indent=2)+'\n')
+(ROOT/'game.json').write_text(json.dumps({'version':1,'name':'Alex vs Bus: The Race — Megalodonte','iconAssetPath':'assets/icon.png','applicationId':'megalodonte.games.alexvsbus','entrySceneId':'menu','lastEditedSceneId':'normal-1','scenes':scenes},ensure_ascii=False,indent=2)+'\n')
 print('Criadas 13 fases + 11 cenas de menus + final:',ROOT/'game.json')

@@ -77,3 +77,5 @@ A engine também permite editar as animações usadas por Alex: selecione `playe
 O progresso é salvo no dispositivo: Normal/fase 1 começa liberada; completar fases libera as próximas e completar uma dificuldade libera a seguinte. Moedas concedem 15 segundos a cada 1000 pontos acumulados durante a corrida. No teclado, A/D ou esquerda/direita movem Alex e espaço pula. A trilha continua entre submenus. Os controles de toque medem 160×160 na referência 1280×720; a câmera reserva uma faixa de 64 pixels para o placar.
 
 Capturas verificadas no emulador: [fases bloqueadas](docs/android-locked-levels.png) e [controles e enquadramento](docs/android-race-layout.png).
+
+O ícone original do jogo está em `assets/icon.png`, configurado em `iconAssetPath`. As builds Android incluem launcher adaptativo e as builds Desktop Linux incluem esse ícone no executável e na janela.
