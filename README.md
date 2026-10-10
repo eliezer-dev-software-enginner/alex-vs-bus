@@ -62,7 +62,7 @@ python3 tools/create-project.py --force
 
 ## Diferenças da adaptação
 
-As fases, sprites, sons e músicas são os originais. A física foi convertida para unidades de mundo e colisões AABB; curvas de veículos são aproximadas por retângulos. As cinco cenas de chegada e o final preservam a ideia do original com sequências simplificadas. A seleção de fases é livre para testar a engine. Não há suporte dedicado a gamepad, opção AZERTY ou as opções de escala de janela do original. Os menus usam a fonte bitmap, ícones e bordas originais; o HUD durante a corrida ainda usa textos nativos dos hosts. O editor da engine continua separado do executável do jogo.
+As fases, sprites, sons e músicas são os originais. A física foi convertida para unidades de mundo e colisões AABB; curvas de veículos são aproximadas por retângulos. As cinco cenas de chegada e o final preservam a ideia do original com sequências simplificadas. As fases são liberadas conforme o progresso salvo do jogador. Não há suporte dedicado a gamepad, opção AZERTY ou as opções de escala de janela do original. Os menus usam a fonte bitmap, ícones e bordas originais; o HUD durante a corrida ainda usa textos nativos dos hosts. O editor da engine continua separado do executável do jogo.
 
 ## Créditos e licenças
 
@@ -74,8 +74,12 @@ As HUDs dos menus usam âncoras relativas à área central de conteúdo: voltar 
 
 A engine também permite editar as animações usadas por Alex: selecione `player` na fase e abra **Animações / prévia**. Colisores, visibilidade, espelhamento e propriedades como `kind`/`goalScene` ficam em **Colisor / propriedades**; camadas, tiles e obstáculos ficam no editor de mapa. O fluxo completo e a revisão dos campos estão em [Recursos do editor](docs/EDITOR_FEATURES.md). Os scripts continuam editáveis em Java dentro da engine.
 
-O progresso é salvo no dispositivo: Normal/fase 1 começa liberada; completar fases libera as próximas e completar uma dificuldade libera a seguinte. Moedas concedem 15 segundos a cada 1000 pontos acumulados durante a corrida. No teclado, A/D ou esquerda/direita movem Alex e espaço pula. A trilha continua entre submenus. Os controles de toque medem 160×160 na referência 1280×720; a câmera reserva uma faixa de 64 pixels para o placar.
+O progresso é salvo no dispositivo: Normal/fase 1 começa liberada; completar fases libera as próximas e completar uma dificuldade libera a seguinte. A moeda dourada vale **100 pontos** e a cinza (prata) vale **50 pontos**. A cada **1000 pontos** coletados durante a corrida, você ganha **15 segundos**: 10 douradas, 20 pratas ou uma combinação das duas. O aviso **“+ 15 seconds”** aparece por 1,5 segundo abaixo do cronômetro, na faixa do placar, sem cobrir o cenário. No teclado, A/D ou esquerda/direita movem Alex e espaço pula. A trilha continua entre submenus. Os controles de toque medem 160×160 na referência 1280×720; a câmera reserva uma faixa de 64 pixels para o placar.
 
 Capturas verificadas no emulador: [fases bloqueadas](docs/android-locked-levels.png) e [controles e enquadramento](docs/android-race-layout.png).
 
 O ícone original do jogo está em `assets/icon.png`, configurado em `iconAssetPath`. As builds Android incluem launcher adaptativo e as builds Desktop Linux incluem esse ícone no executável e na janela.
+
+No Android, a tela acompanha o sensor nas duas posições horizontais (`sensorLandscape`). Girar o celular mantém a corrida em andamento.
+
+Os botões de fase e dificuldade usam a propriedade booleana **`liberado`**. No editor, selecione o botão e abra **Propriedades / condições HUD → Propriedades**; marque/desmarque `liberado` e clique em **Aplicar** para visualizar número ou cadeado. A aba **Condição visual** define as duas imagens e o bloqueio do clique. Duplicações mantêm a propriedade e a condição. Fase 1/Normal começam com `true`; os demais começam com `false`. O script usa esse valor inicial e libera novos botões conforme o progresso salvo. Definir `true` no documento permite liberar uma fase inicialmente para testes ou outro fluxo de jogo.

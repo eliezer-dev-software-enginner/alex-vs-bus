@@ -8,7 +8,7 @@ import java.util.*;
 
 public final class Race implements GameScript {
     private Game.Entity player,bus;
-    private double vx,vy,time=90,clock,jumpBuffer,coyote,hurt,invincible,respawnDelay,checkpointX=.125,checkpointY=7-1.0/6,winTime;
+    private double vx,vy,time=90,clock,jumpBuffer,coyote,hurt,invincible,respawnDelay,checkpointX=.125,checkpointY=7-1.0/6,winTime,bonusSeconds;
     private int score,goalScene;
     private String phase="run",ropeId="",lastRope="";
     private final Map<String,Double> springCooldown=new HashMap<>();
@@ -19,7 +19,7 @@ public final class Race implements GameScript {
         for(String id:new String[]{"left","right","jump"})c.findHud(id).visible=!c.state().getOrDefault("touch","true").equals("false");
         c.findHud("scanlines").visible=c.state().getOrDefault("scanlines","false").equals("true");
         if(c.state().getOrDefault("auto","true").equals("false")){c.scene().camera.width=Double.parseDouble(c.state().getOrDefault("width","480"))/24;c.scene().camera.height=Double.parseDouble(c.state().getOrDefault("height","270"))/24;}
-        c.animate(player,"stand");hideOverlay(c);c.findHud("level").text=c.scene().name;refresh(c);
+        c.findHud("time-bonus").visible=false;c.animate(player,"stand");hideOverlay(c);c.findHud("level").text=c.scene().name;refresh(c);
     }
     @Override public void onUpdate(double dt,GameContext c){
         if(c.actionPressed("f9")){boolean muted=!Boolean.parseBoolean(c.state().getOrDefault("muted","false"));c.state().put("muted",""+muted);c.state().put("audio",""+!muted);c.mute(muted);}
@@ -29,6 +29,7 @@ public final class Race implements GameScript {
         if(phase.equals("pause")){
             if(c.actionPressed("resume")||c.actionPressed("escape")||c.actionPressed("pause")){phase="run";hideOverlay(c);c.pause(false);}return;
         }
+        bonusSeconds=Math.max(0,bonusSeconds-dt);c.findHud("time-bonus").visible=bonusSeconds>0;
         if(phase.equals("timeup")){bus.x+=dt*12;return;}
         if(phase.equals("win")){finish(dt,c);return;}
         if(c.actionPressed("escape")||c.actionPressed("pause")){phase="pause";overlay(c,"PAUSADO",true);c.pause(true);return;}
@@ -83,7 +84,7 @@ public final class Race implements GameScript {
             }else if(kind.equals("rope")&&!e.id.equals(lastRope)&&ropeId.isEmpty()&&hurt<=0&&c.overlaps(player,e)){
                 ropeId=e.id;vy=0;vx=10.75;c.animate(player,"rope");
             }else if(kind.startsWith("coin")&&c.overlaps(player,e)){
-                e.visible=false;int before=score;score+=kind.equals("coin-gold")?100:50;time+=15*(score/1000-before/1000);sound(c,"assets/coin.wav");
+                e.visible=false;int before=score;score+=kind.equals("coin-gold")?100:50;int bonus=15*(score/1000-before/1000);time+=bonus;if(bonus>0){bonusSeconds=1.5;var notice=c.findHud("time-bonus");notice.text="+ "+bonus+" seconds";notice.visible=true;}sound(c,"assets/coin.wav");
             }else if(kind.equals("banana")){
                 if(e.properties.containsKey("velocityY")){
                     double speed=Double.parseDouble(e.properties.get("velocityY"))-9.75*dt;e.y+=speed*dt;e.x+=6*dt;e.properties.put("velocityY",""+speed);if(e.y<7){e.y=7;e.properties.remove("velocityY");}

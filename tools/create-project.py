@@ -44,6 +44,7 @@ def overlay():
 def game_hud():
  result=[hud('score','SCORE: 000000',24,4,400,size=26),hud('time','TIME: 90',0,4,240,size=26,anchor='center'),hud('level','',24,64,650,size=22),button('pause','II',24,4,56,56,anchor='right'),hud('hint','A/D: correr • espaço: pular • Esc: pausa',180,14,850,34,20,vertical='bottom')]
  result += [button('left','',24,12,160,160,vertical='bottom',image=asset('TOUCH_LEFT')),button('right','',200,12,160,160,vertical='bottom',image=asset('TOUCH_RIGHT')),button('jump','',24,12,160,160,anchor='right',vertical='bottom',image=asset('TOUCH_JUMP'))]
+ bonus=hud('time-bonus','+ 15 seconds',0,34,200,28,20,anchor='center');bonus.update(color='#ffe66d',visible=False);result.append(bonus)
  result += overlay()+[hud('scanlines','',0,0,1280,720,type='image',image='assets/scanlines.png')]
  for h in result:
   if h['id'] in ['panel','notice','resume','retry','menu','scanlines','level','hint']:h['visible']=False

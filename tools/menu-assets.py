@@ -47,7 +47,11 @@ def menus(hud):
  def add(page,id,x,y,w,h,caption='',icon='',value='',gray=False,button=True,lines=None):
   name=page+'-'+id;path=panel(name,w,h,caption,icon,value,gray,lines)
   item=hud(id if page=='main' else page+'-'+id,'',(x+w/2-240)*S,y*S,w*S,h*S,type='button' if button else 'image',action=id if page=='main' else page+'-'+id,anchor='center',image=path)
-  item['visible']=page=='main';items.append(item)
+  item['visible']=page=='main'
+  if page in ['levels','difficulty'] and id not in ['back','header']:
+   item['properties']={'liberado':id in ['level1','normal']}
+   item['condition']={'property':'liberado','trueAssetPath':path if page=='levels' else 'assets/menu/'+name+'-unlocked.png','falseAssetPath':'assets/menu/'+name+'-locked.png','disableWhenFalse':True}
+  items.append(item)
  def header(page,title):
   add(page,'back',8,8,40,40,icon='MENU_RETURN')
   add(page,'header',144,8,192,40,caption=title,button=False)

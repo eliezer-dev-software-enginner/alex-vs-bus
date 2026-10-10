@@ -199,7 +199,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-normal.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": true
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/difficulty-normal-unlocked.png",
+            "falseAssetPath": "assets/menu/difficulty-normal-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "difficulty-hard",
@@ -215,7 +224,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-hard.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/difficulty-hard-unlocked.png",
+            "falseAssetPath": "assets/menu/difficulty-hard-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "difficulty-super",
@@ -231,7 +249,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/difficulty-super.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/difficulty-super-unlocked.png",
+            "falseAssetPath": "assets/menu/difficulty-super-locked.png",
+            "disableWhenFalse": true
+          }
         }
       ]
     },
@@ -298,7 +325,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level1.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": true
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/levels-level1.png",
+            "falseAssetPath": "assets/menu/levels-level1-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "levels-level2",
@@ -314,7 +350,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level2.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/levels-level2.png",
+            "falseAssetPath": "assets/menu/levels-level2-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "levels-level3",
@@ -330,7 +375,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level3.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/levels-level3.png",
+            "falseAssetPath": "assets/menu/levels-level3-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "levels-level4",
@@ -346,7 +400,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level4.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/levels-level4.png",
+            "falseAssetPath": "assets/menu/levels-level4-locked.png",
+            "disableWhenFalse": true
+          }
         },
         {
           "id": "levels-level5",
@@ -362,7 +425,16 @@
           "verticalAnchor": "center",
           "assetPath": "assets/menu/levels-level5.png",
           "visible": true,
-          "referenceArea": "content"
+          "referenceArea": "content",
+          "properties": {
+            "liberado": false
+          },
+          "condition": {
+            "property": "liberado",
+            "trueAssetPath": "assets/menu/levels-level5.png",
+            "falseAssetPath": "assets/menu/levels-level5-locked.png",
+            "disableWhenFalse": true
+          }
         }
       ]
     },
@@ -6648,6 +6720,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -20239,6 +20326,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -33087,6 +33189,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -46691,6 +46808,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -59721,6 +59853,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -75265,6 +75412,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -89558,6 +89720,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -103238,6 +103415,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -117609,6 +117801,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -131367,6 +131574,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -145422,6 +145644,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -157402,6 +157639,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [
@@ -170231,6 +170483,21 @@
           "assetPath": "assets/scanlines.png",
           "visible": false,
           "referenceArea": "content"
+        },
+        {
+          "id": "time-bonus",
+          "type": "text",
+          "text": "+ 15 seconds",
+          "offsetX": 0,
+          "offsetY": 34,
+          "width": 200,
+          "height": 28,
+          "fontSize": 20,
+          "horizontalAnchor": "center",
+          "verticalAnchor": "top",
+          "referenceArea": "viewport",
+          "color": "#ffe66d",
+          "visible": false
         }
       ],
       "tileMaps": [

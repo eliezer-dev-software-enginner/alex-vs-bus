@@ -25,12 +25,12 @@ public final class Menu implements GameScript {
                 else for(String next:new String[]{"jukebox","settings","about","quit"})if(pressed(c,next)){open(c,next);break;}
             }
             case "difficulty" -> {
-                for(String choice:new String[]{"normal","hard","super"})if(Progress.rank(choice)<=Progress.highest(c)&&pressed(c,choice)){difficulty=choice;c.state().put("difficulty",difficulty);open(c,"levels");break;}
+                for(String choice:new String[]{"normal","hard","super"})if(c.findHud("difficulty-"+choice).booleanProperty("liberado",false)&&pressed(c,choice)){difficulty=choice;c.state().put("difficulty",difficulty);open(c,"levels");break;}
                 if(c.actionPressed("enter")){difficulty="normal";c.state().put("difficulty",difficulty);open(c,"levels");}
             }
             case "levels" -> {
                 int count=difficulty.equals("super")?3:5;
-                for(int i=1;i<=count;i++)if(i<=Progress.level(c,difficulty)&&(pressed(c,"level"+i)||c.actionPressed("digit"+i)||(i==1&&c.actionPressed("enter")))){c.state().put("difficulty",difficulty);c.state().put("score","0");sound(c);c.changeScene(difficulty+"-"+i);break;}
+                for(int i=1;i<=count;i++)if(c.findHud("levels-level"+i).booleanProperty("liberado",false)&&(pressed(c,"level"+i)||c.actionPressed("digit"+i)||(i==1&&c.actionPressed("enter")))){c.state().put("difficulty",difficulty);c.state().put("score","0");sound(c);c.changeScene(difficulty+"-"+i);break;}
             }
             case "settings" -> {if(pressed(c,"display"))open(c,"display");else if(pressed(c,"sound"))open(c,"sound");else if(pressed(c,"touch"))toggle(c,"touch");}
             case "display" -> {if(pressed(c,"size"))open(c,"vscreen");else if(pressed(c,"scanlines"))toggle(c,"scanlines");}
@@ -49,8 +49,8 @@ public final class Menu implements GameScript {
     private void variant(GameContext c,String id,String suffix){c.scene().hud.stream().filter(h->h.id.equals(id)).findFirst().ifPresent(h->h.assetPath="assets/menu/"+id+"-"+suffix+".png");}
     private void refresh(GameContext c){
         for(var h:c.scene().hud)h.visible=page.equals("main")?!h.id.contains("-"):h.id.startsWith(page+"-");
-        if(page.equals("levels"))for(int i=1;i<=5;i++){var h=c.findHud("levels-level"+i);h.visible=i<=(difficulty.equals("super")?3:5);h.assetPath="assets/menu/levels-level"+i+(i>Progress.level(c,difficulty)?"-locked":"")+".png";}
-        if(page.equals("difficulty"))for(String name:Progress.DIFFICULTIES)c.findHud("difficulty-"+name).assetPath="assets/menu/difficulty-"+name+(Progress.rank(name)>Progress.highest(c)?"-locked":"-unlocked")+".png";
+        if(page.equals("levels"))for(int i=1;i<=5;i++){var h=c.findHud("levels-level"+i);h.visible=i<=(difficulty.equals("super")?3:5);h.setBooleanProperty("liberado",h.booleanProperty("liberado",false)||i<=Progress.level(c,difficulty));}
+        if(page.equals("difficulty"))for(String name:Progress.DIFFICULTIES){var h=c.findHud("difficulty-"+name);h.setBooleanProperty("liberado",h.booleanProperty("liberado",false)||Progress.rank(name)<=Progress.highest(c));}
         c.mute(!enabled(c,"audio"));c.state().put("muted",""+!enabled(c,"audio"));c.scene().musicVolume=enabled(c,"music")?.5:0;
         if(page.equals("main"))c.findHud("audio").assetPath="assets/menu/main-audio"+(enabled(c,"audio")?"":"-off")+".png";
         for(String key:new String[]{"audio","music","sfx"})variant(c,"sound-"+key,enabled(c,key)?"on":"off");

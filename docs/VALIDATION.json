@@ -2,12 +2,12 @@
   "date": "2026-10-10",
   "tests": {
     "build/test-results/test": {
-      "tests": 31,
+      "tests": 32,
       "failures": 0,
       "skipped": 1
     },
     "engine-core/build/test-results/test": {
-      "tests": 27,
+      "tests": 32,
       "failures": 0,
       "skipped": 0
     }
@@ -30,5 +30,8 @@
     "docs/android-locked-levels.png",
     "docs/android-race-layout.png"
   ],
-  "applicationIcon": "Original 128x128 PNG verified in Desktop Linux package; Android APK contains adaptive launcher XML, foreground PNG and all five launcher density PNGs. Icon configuration and gameplay tests passed."
+  "applicationIcon": "Original 128x128 PNG verified in Desktop Linux package; Android APK contains adaptive launcher XML, foreground PNG and all five launcher density PNGs. Icon configuration and gameplay tests passed.",
+  "timeBonusNotice": "Gameplay tests verify + 15 seconds appears at each coin-score threshold, stays outside the world viewport and disappears after 1.5 seconds.",
+  "landscapeOrientation": "Built APK manifest verified: sensorLandscape (6), configChanges orientation|screenSize (0x480).",
+  "conditionalHud": "Typed boolean/number/text properties, shared asset conditions and disabled clicks. Native checkbox editing, copy isolation, invalid-condition validation and authored level unlock verified."
 }
