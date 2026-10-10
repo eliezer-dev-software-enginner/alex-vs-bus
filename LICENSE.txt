@@ -1,0 +1,13 @@
+Alex vs Bus: The Race — adaptação para Megalodonte Engine
+
+Código do jogo/adaptação: GPL-3.0-or-later. Texto integral em licenses/GPL-3.0.txt.
+Assets originais e derivados: CC BY-SA 4.0. Texto integral em licenses/CC-BY-SA-4.0.txt.
+
+Jogo original (C) 2021-2025 Alexandre Almeida / M374LX.
+https://github.com/M374LX/alexvsbus
+Design adicional: Hoton Bastos. Testes originais: Harim Pires.
+Fontes dos gráficos: Telegrama (YoWorks) e Press Start 2P (codeman38).
+
+Os sprites foram extraídos do atlas e as músicas XM convertidas para MP3.
+As fases foram convertidas para game.json e o gameplay adaptado para scripts Java.
+Origem e revisão fixa: upstream/ORIGIN.json. Fontes da adaptação em scripts/ e tools/.

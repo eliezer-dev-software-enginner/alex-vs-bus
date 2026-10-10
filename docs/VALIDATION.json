@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-10",
+  "tests": {
+    "build/test-results/test": {
+      "tests": 23,
+      "failures": 0,
+      "skipped": 1
+    },
+    "engine-core/build/test-results/test": {
+      "tests": 23,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "androidEmulator": "Pixel_9a_API_35 (read-only)",
+  "androidInstrumentation": "PASS: title, level select, real multitouch movement+jump, pause/resume, restart and menu",
+  "desktop": "Standalone Linux x86_64 launched using bundled runtime",
+  "reference": {
+    "repository": "https://github.com/M374LX/alexvsbus",
+    "commit": "a711b002e8f4107b2af4375dd7af3a63bf4aee9c",
+    "codeLicense": "GPL-3.0-or-later",
+    "assetsLicense": "CC-BY-SA-4.0"
+  },
+  "menus": "Original atlas bitmap font, icons and borders; main, difficulty, level, settings, display, sound, virtual screen, jukebox, about, credits and quit. Functional settings verified in desktop and Android.",
+  "androidLint": "lintDebug successful",
+  "editableMenuScenes": 11,
+  "totalScenes": 25
+}

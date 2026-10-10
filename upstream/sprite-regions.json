@@ -1,0 +1,860 @@
+{
+  "NULL": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "BANANA_PEEL": [
+    960,
+    32,
+    8,
+    8
+  ],
+  "BEARDED_MAN_STAND": [
+    0,
+    384,
+    32,
+    64
+  ],
+  "BEARDED_MAN_WALK": [
+    32,
+    384,
+    32,
+    64
+  ],
+  "BEARDED_MAN_JUMP": [
+    224,
+    384,
+    32,
+    64
+  ],
+  "BG_BLACK": [
+    960,
+    0,
+    8,
+    8
+  ],
+  "BG_SKY1": [
+    968,
+    0,
+    8,
+    8
+  ],
+  "BG_SKY2": [
+    976,
+    0,
+    8,
+    8
+  ],
+  "BG_SKY3": [
+    984,
+    0,
+    8,
+    8
+  ],
+  "BIRD": [
+    288,
+    384,
+    16,
+    8
+  ],
+  "BUS": [
+    0,
+    192,
+    408,
+    104
+  ],
+  "BUS_CHARACTER_1": [
+    0,
+    320,
+    24,
+    64
+  ],
+  "BUS_CHARACTER_2": [
+    32,
+    320,
+    24,
+    64
+  ],
+  "BUS_CHARACTER_3": [
+    64,
+    320,
+    24,
+    64
+  ],
+  "BUS_DOOR": [
+    416,
+    192,
+    64,
+    88
+  ],
+  "BUS_ROUTE": [
+    416,
+    288,
+    32,
+    32
+  ],
+  "BUS_STOP_SIGN": [
+    832,
+    0,
+    16,
+    88
+  ],
+  "BUS_WHEEL": [
+    96,
+    320,
+    64,
+    40
+  ],
+  "CAR_BLUE": [
+    288,
+    320,
+    136,
+    56
+  ],
+  "CAR_SILVER": [
+    448,
+    320,
+    136,
+    56
+  ],
+  "CAR_YELLOW": [
+    608,
+    320,
+    136,
+    56
+  ],
+  "CAR_WHEEL": [
+    768,
+    352,
+    32,
+    24
+  ],
+  "CHARSET_WHITE": [
+    384,
+    384,
+    8,
+    8
+  ],
+  "CHARSET_GREEN": [
+    544,
+    384,
+    8,
+    8
+  ],
+  "CHARSET_GRAY": [
+    704,
+    384,
+    8,
+    8
+  ],
+  "COIN_SILVER": [
+    544,
+    160,
+    8,
+    8
+  ],
+  "COIN_GOLD": [
+    576,
+    160,
+    8,
+    8
+  ],
+  "COIN_SPARK_SILVER": [
+    608,
+    160,
+    8,
+    8
+  ],
+  "COIN_SPARK_GOLD": [
+    640,
+    160,
+    8,
+    8
+  ],
+  "CRACK_PARTICLE": [
+    672,
+    160,
+    8,
+    8
+  ],
+  "CRATE": [
+    832,
+    96,
+    24,
+    24
+  ],
+  "DEEP_HOLE_LEFT_FG": [
+    800,
+    0,
+    24,
+    16
+  ],
+  "DUNG": [
+    352,
+    384,
+    8,
+    8
+  ],
+  "ERROR": [
+    544,
+    576,
+    40,
+    8
+  ],
+  "FLAGMAN": [
+    0,
+    448,
+    64,
+    88
+  ],
+  "GUSH_TOP": [
+    544,
+    96,
+    32,
+    8
+  ],
+  "GUSH_MIDDLE": [
+    640,
+    96,
+    32,
+    24
+  ],
+  "GUSH_CRACK": [
+    736,
+    96,
+    16,
+    8
+  ],
+  "GUSH_HOLE": [
+    768,
+    96,
+    16,
+    24
+  ],
+  "HEN": [
+    736,
+    128,
+    32,
+    32
+  ],
+  "HYDRANT": [
+    896,
+    96,
+    16,
+    24
+  ],
+  "LOGO_SMALL": [
+    384,
+    448,
+    224,
+    64
+  ],
+  "LOGO_LARGE": [
+    640,
+    448,
+    296,
+    80
+  ],
+  "MEDAL1": [
+    288,
+    416,
+    24,
+    32
+  ],
+  "MEDAL2": [
+    288,
+    448,
+    24,
+    32
+  ],
+  "MEDAL3": [
+    288,
+    480,
+    32,
+    32
+  ],
+  "OVERHEAD_SIGN": [
+    864,
+    0,
+    16,
+    32
+  ],
+  "OVERHEAD_SIGN_BASE_TOP": [
+    864,
+    32,
+    16,
+    24
+  ],
+  "OVERHEAD_SIGN_BASE_MIDDLE": [
+    864,
+    64,
+    8,
+    24
+  ],
+  "OVERHEAD_SIGN_BASE_BOTTOM": [
+    864,
+    96,
+    8,
+    24
+  ],
+  "PASSAGEWAY_LEFT_FG": [
+    800,
+    32,
+    24,
+    16
+  ],
+  "PASSAGEWAY_RIGHT_FG": [
+    800,
+    64,
+    24,
+    16
+  ],
+  "PASSAGEWAY_RIGHT_CLOSED": [
+    800,
+    96,
+    24,
+    24
+  ],
+  "PAUSE": [
+    704,
+    576,
+    32,
+    32
+  ],
+  "PLAYER_STAND": [
+    0,
+    0,
+    32,
+    64
+  ],
+  "PLAYER_WALK": [
+    32,
+    0,
+    32,
+    64
+  ],
+  "PLAYER_JUMP": [
+    224,
+    0,
+    32,
+    64
+  ],
+  "PLAYER_GRABROPE": [
+    256,
+    0,
+    32,
+    64
+  ],
+  "PLAYER_THROWBACK": [
+    288,
+    0,
+    32,
+    64
+  ],
+  "PLAYER_SLIP": [
+    0,
+    64,
+    64,
+    64
+  ],
+  "PLAYER_RUN": [
+    288,
+    128,
+    64,
+    64
+  ],
+  "PLAYER_CLEAN_DUNG": [
+    0,
+    128,
+    32,
+    64
+  ],
+  "POLE": [
+    928,
+    0,
+    24,
+    136
+  ],
+  "PUSH_ARROW": [
+    864,
+    128,
+    40,
+    24
+  ],
+  "ROPE_VERTICAL": [
+    960,
+    64,
+    8,
+    48
+  ],
+  "ROPE_HORIZONTAL_LEFT": [
+    896,
+    0,
+    24,
+    24
+  ],
+  "ROPE_HORIZONTAL_MIDDLE": [
+    896,
+    32,
+    24,
+    24
+  ],
+  "ROPE_HORIZONTAL_RIGHT": [
+    896,
+    64,
+    24,
+    24
+  ],
+  "SPRING": [
+    544,
+    128,
+    32,
+    16
+  ],
+  "TRUCK": [
+    672,
+    192,
+    280,
+    128
+  ],
+  "LEVEL_BLOCK_0": [
+    544,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_1": [
+    576,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_2": [
+    608,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_3": [
+    640,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_4": [
+    672,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_5": [
+    704,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_6": [
+    736,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_7": [
+    768,
+    0,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_8": [
+    544,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_9": [
+    576,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_10": [
+    608,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_11": [
+    640,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_12": [
+    672,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_13": [
+    704,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_14": [
+    736,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_15": [
+    768,
+    32,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_16": [
+    544,
+    64,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_17": [
+    576,
+    64,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_18": [
+    608,
+    64,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_19": [
+    640,
+    64,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_20": [
+    672,
+    64,
+    24,
+    24
+  ],
+  "LEVEL_BLOCK_21": [
+    704,
+    64,
+    24,
+    24
+  ],
+  "MENU_PLAY": [
+    0,
+    544,
+    80,
+    24
+  ],
+  "MENU_PLAY_SELECTED": [
+    288,
+    544,
+    80,
+    24
+  ],
+  "MENU_TRYAGAIN": [
+    96,
+    544,
+    24,
+    24
+  ],
+  "MENU_TRYAGAIN_SELECTED": [
+    384,
+    544,
+    24,
+    24
+  ],
+  "MENU_JUKEBOX": [
+    128,
+    544,
+    24,
+    24
+  ],
+  "MENU_JUKEBOX_SELECTED": [
+    416,
+    544,
+    24,
+    24
+  ],
+  "MENU_SETTINGS": [
+    160,
+    544,
+    24,
+    24
+  ],
+  "MENU_SETTINGS_SELECTED": [
+    448,
+    544,
+    24,
+    24
+  ],
+  "MENU_ABOUT": [
+    192,
+    544,
+    24,
+    24
+  ],
+  "MENU_ABOUT_SELECTED": [
+    480,
+    544,
+    24,
+    24
+  ],
+  "MENU_QUIT": [
+    224,
+    544,
+    24,
+    24
+  ],
+  "MENU_QUIT_SELECTED": [
+    512,
+    544,
+    24,
+    24
+  ],
+  "MENU_RETURN": [
+    0,
+    576,
+    24,
+    24
+  ],
+  "MENU_RETURN_SELECTED": [
+    288,
+    576,
+    24,
+    24
+  ],
+  "MENU_AUDIO_ON": [
+    32,
+    576,
+    24,
+    24
+  ],
+  "MENU_AUDIO_ON_SELECTED": [
+    320,
+    576,
+    24,
+    24
+  ],
+  "MENU_AUDIO_OFF": [
+    64,
+    576,
+    24,
+    24
+  ],
+  "MENU_AUDIO_OFF_SELECTED": [
+    352,
+    576,
+    24,
+    24
+  ],
+  "MENU_CONFIRM": [
+    96,
+    576,
+    24,
+    24
+  ],
+  "MENU_CONFIRM_SELECTED": [
+    384,
+    576,
+    24,
+    24
+  ],
+  "MENU_CANCEL": [
+    128,
+    576,
+    24,
+    24
+  ],
+  "MENU_CANCEL_SELECTED": [
+    416,
+    576,
+    24,
+    24
+  ],
+  "MENU_RETURN_SMALL": [
+    160,
+    576,
+    24,
+    24
+  ],
+  "MENU_RETURN_SMALL_SELECTED": [
+    448,
+    576,
+    24,
+    24
+  ],
+  "MENU_1": [
+    0,
+    608,
+    24,
+    32
+  ],
+  "MENU_1_SELECTED": [
+    288,
+    608,
+    24,
+    32
+  ],
+  "MENU_2": [
+    32,
+    608,
+    24,
+    32
+  ],
+  "MENU_2_SELECTED": [
+    320,
+    608,
+    24,
+    32
+  ],
+  "MENU_3": [
+    64,
+    608,
+    24,
+    32
+  ],
+  "MENU_3_SELECTED": [
+    352,
+    608,
+    24,
+    32
+  ],
+  "MENU_4": [
+    96,
+    608,
+    24,
+    32
+  ],
+  "MENU_4_SELECTED": [
+    384,
+    608,
+    24,
+    32
+  ],
+  "MENU_5": [
+    128,
+    608,
+    24,
+    32
+  ],
+  "MENU_5_SELECTED": [
+    416,
+    608,
+    24,
+    32
+  ],
+  "MENU_LOCKED": [
+    160,
+    608,
+    24,
+    32
+  ],
+  "MENU_BORDER_LEFT": [
+    544,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_LEFT_SELECTED": [
+    576,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_LEFT_DISABLED": [
+    608,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOP": [
+    552,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOP_SELECTED": [
+    584,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOP_DISABLED": [
+    616,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOPLEFT": [
+    560,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOPLEFT_SELECTED": [
+    592,
+    544,
+    8,
+    8
+  ],
+  "MENU_BORDER_TOPLEFT_DISABLED": [
+    624,
+    544,
+    8,
+    8
+  ],
+  "SCANLINE": [
+    704,
+    544,
+    8,
+    1
+  ],
+  "TOUCH_LEFT": [
+    736,
+    544,
+    64,
+    64
+  ],
+  "TOUCH_LEFT_HELD": [
+    736,
+    608,
+    64,
+    64
+  ],
+  "TOUCH_RIGHT": [
+    800,
+    544,
+    64,
+    64
+  ],
+  "TOUCH_RIGHT_HELD": [
+    800,
+    608,
+    64,
+    64
+  ],
+  "TOUCH_JUMP": [
+    864,
+    544,
+    64,
+    64
+  ],
+  "TOUCH_JUMP_HELD": [
+    864,
+    608,
+    64,
+    64
+  ]
+}
