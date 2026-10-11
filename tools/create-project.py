@@ -168,5 +168,7 @@ scenes=menu_scenes+scenes+[ending]
 anchor_spec=importlib.util.spec_from_file_location('hud_anchors',ROOT/'tools/hud-anchors.py');anchors=importlib.util.module_from_spec(anchor_spec);anchor_spec.loader.exec_module(anchors)
 for scene in scenes:
  for h in scene.get('hud',[]):anchors.normalize(h,scene['id'].startswith('menu') or h['id'] in ['panel','notice','resume','retry','menu','scanlines','level','hint'])
+collision_spec=importlib.util.spec_from_file_location('collision_areas',ROOT/'tools/collision-areas.py');collisions=importlib.util.module_from_spec(collision_spec);collision_spec.loader.exec_module(collisions)
+collisions.update({'scenes':scenes},ROOT)
 (ROOT/'game.json').write_text(json.dumps({'version':1,'versionCode':1,'versionName':'0.1.0','name':'Alex vs Bus: The Race — Megalodonte','iconAssetPath':'assets/icon.png','applicationId':'megalodonte.games.alexvsbus','entrySceneId':'menu','lastEditedSceneId':'normal-1','scenes':scenes},ensure_ascii=False,indent=2)+'\n')
 print('Criadas 13 fases + 11 cenas de menus + final:',ROOT/'game.json')

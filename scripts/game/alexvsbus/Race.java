@@ -27,12 +27,13 @@ public final class Race implements GameScript {
         if(c.actionPressed("menu")){c.pause(false);c.changeScene("menu");return;}
         if(c.actionPressed("retry")){c.state().put("score","0");c.pause(false);c.changeScene(c.scene().id);return;}
         if(phase.equals("pause")){
-            if(c.actionPressed("resume")||c.actionPressed("escape")||c.actionPressed("pause")){phase="run";hideOverlay(c);c.pause(false);}return;
+            if(c.actionPressed("pad_b")){c.pause(false);c.changeScene("menu");return;}
+            if(c.actionPressed("resume")||c.actionPressed("escape")||c.actionPressed("pause")||c.actionPressed("pad_start")||c.actionPressed("pad_a")){phase="run";hideOverlay(c);c.pause(false);}return;
         }
         bonusSeconds=Math.max(0,bonusSeconds-dt);c.findHud("time-bonus").visible=bonusSeconds>0;
         if(phase.equals("timeup")){bus.x+=dt*12;return;}
         if(phase.equals("win")){finish(dt,c);return;}
-        if(c.actionPressed("escape")||c.actionPressed("pause")){phase="pause";overlay(c,"PAUSADO",true);c.pause(true);return;}
+        if(c.actionPressed("escape")||c.actionPressed("pause")||c.actionPressed("pad_start")){phase="pause";overlay(c,"PAUSADO",true);c.pause(true);return;}
         clock+=dt;time=Math.max(0,time-dt);
         if(time<=0){phase="timeup";overlay(c,"TEMPO ESGOTADO! O ÔNIBUS PARTIU.",false);sound(c,"assets/time.wav");refresh(c);return;}
         if(time<10&&((int)(time+dt)!=(int)time))sound(c,"assets/time.wav");
@@ -40,7 +41,7 @@ public final class Race implements GameScript {
         player.visible=invincible<=0||((int)(clock*12)%2==0);
         if(respawnDelay>0){respawnDelay-=dt;refresh(c);return;}
         double direction=Math.max(-1,Math.min(1,c.horizontal()+(c.actionDown("right")?1:0)-(c.actionDown("left")?1:0)));
-        boolean jump=c.actionPressed("jump")||c.actionPressed("space");
+        boolean jump=c.actionPressed("jump")||c.actionPressed("space")||c.actionPressed("pad_a");
         jumpBuffer=jump?.2:Math.max(0,jumpBuffer-dt);
         boolean grounded=c.grounded(player);coyote=grounded?.1:Math.max(0,coyote-dt);
         if(!ropeId.isEmpty()){
@@ -54,7 +55,7 @@ public final class Race implements GameScript {
             if(movement.blockedY()){if(vy<0){grounded=true;coyote=.1;}vy=0;}
             if(movement.blockedX()){
                 boolean pushed=false;
-                for(var e:c.scene().objects)if(kind(e).equals("pushable")&&e.solid&&near(player,e,.2)){
+                for(var e:c.scene().objects)if(kind(e).equals("pushable")&&e.solid&&c.overlaps(player,e,.2)){
                     var push=c.move(e,Math.max(0,vx*dt),0);pushed=push.x()>0;
                     if(e.x-Double.parseDouble(e.properties.get("startX"))>.95){e.solid=false;e.visible=false;sound(c,"assets/crate.wav");}
                 }
@@ -72,7 +73,7 @@ public final class Race implements GameScript {
         for(var e:List.copyOf(c.scene().objects)){
             String kind=kind(e);
             if(kind.equals("checkpoint")){if(player.x>=e.x&&e.x>checkpointX){checkpointX=e.x;checkpointY=e.y;}continue;}
-            if(kind.equals("hole")){if(player.y<4.8&&player.x+player.colliderOffsetX+player.colliderWidth>e.x&&player.x+player.colliderOffsetX<e.x+e.width){respawn(c);return;}continue;}
+            if(kind.equals("hole")){if(c.overlaps(player,e)){respawn(c);return;}continue;}
             if(kind.startsWith("trigger-")){trigger(e,dt,c);continue;}
             if(!e.visible)continue;
             if(kind.equals("gush")){
@@ -80,7 +81,7 @@ public final class Race implements GameScript {
             }
             if(kind.equals("spring")){
                 springCooldown.computeIfPresent(e.id,(id,value)->Math.max(0,value-dt));if(e.animationTime>.25)e.animation="";
-                if(near(player,e,.08)&&vy<=0&&springCooldown.getOrDefault(e.id,0.0)<=0){vy=10.25;springCooldown.put(e.id,.4);c.animate(e,"bounce");e.animationTime=0;sound(c,"assets/spring.wav");}
+                if(c.overlaps(player,e,.08)&&vy<=0&&springCooldown.getOrDefault(e.id,0.0)<=0){vy=10.25;springCooldown.put(e.id,.4);c.animate(e,"bounce");e.animationTime=0;sound(c,"assets/spring.wav");}
             }else if(kind.equals("rope")&&!e.id.equals(lastRope)&&ropeId.isEmpty()&&hurt<=0&&c.overlaps(player,e)){
                 ropeId=e.id;vy=0;vx=10.75;c.animate(player,"rope");
             }else if(kind.startsWith("coin")&&c.overlaps(player,e)){
@@ -90,9 +91,9 @@ public final class Race implements GameScript {
                     double speed=Double.parseDouble(e.properties.get("velocityY"))-9.75*dt;e.y+=speed*dt;e.x+=6*dt;e.properties.put("velocityY",""+speed);if(e.y<7){e.y=7;e.properties.remove("velocityY");}
                 }
                 if(invincible<=0&&hurt<=0&&c.overlaps(player,e)){e.visible=false;hurt=1;invincible=1.5;vx=-.5;vy=1;player.width=64.0/24;c.animate(player,"slip");sound(c,"assets/slip.wav");}
-            }else if((kind.equals("gush")||kind.equals("gush-body")||kind.equals("gush-crack"))&&invincible<=0&&hurt<=0&&near(player,e,.08)){
+            }else if((kind.equals("gush")||kind.equals("gush-body")||kind.equals("gush-crack"))&&invincible<=0&&hurt<=0&&c.overlaps(player,e,.08)){
                 hurt=.6;invincible=1.5;vx=-4.25;vy=6;ropeId="";c.animate(player,"hit");sound(c,"assets/hit.wav");
-                if(kind.equals("gush-crack")){e.properties.put("kind","gush");e.properties.put("baseY",""+(e.y+.5));e.height=1.5;c.animate(e,"flow");}
+                if(kind.equals("gush-crack")){e.properties.put("kind","gush");e.properties.put("baseY",""+(e.y+.5));e.height=1.5;e.colliderOffsetX=3.0/24;e.colliderOffsetY=0;e.colliderWidth=9.0/24;e.colliderHeight=e.height;c.animate(e,"flow");}
             }
         }
     }
@@ -101,7 +102,7 @@ public final class Race implements GameScript {
         if(!e.visible)return;
         boolean hen=kind(e).equals("trigger-hen");e.x+=(hen?15:50)*dt;
         if(!hen&&!e.properties.containsKey("thrown")&&e.x>=player.x-3){
-            e.properties.put("thrown","true");var peel=new Game.Entity();peel.name="Banana arremessada";peel.assetPath="assets/banana_peel-0.png";peel.x=e.x+2;peel.y=e.y+e.height;peel.width=peel.height=1.0/3;peel.solid=false;peel.properties.put("kind","banana");peel.properties.put("velocityY","3");c.scene().objects.add(peel);
+            e.properties.put("thrown","true");var peel=new Game.Entity();peel.name="Banana arremessada";peel.assetPath="assets/banana_peel-0.png";peel.x=e.x+2;peel.y=e.y+e.height;peel.width=peel.height=1.0/3;peel.solid=true;peel.trigger=true;peel.colliderOffsetX=1.0/24;peel.colliderOffsetY=1.0/24;peel.colliderWidth=6.0/24;peel.colliderHeight=5.0/24;peel.properties.put("kind","banana");peel.properties.put("velocityY","3");c.scene().objects.add(peel);
         }
         if(hen&&invincible<=0&&c.overlaps(player,e)){hurt=.6;invincible=1.5;vx=-4;vy=6;c.animate(player,"hit");sound(c,"assets/hit.wav");}
         if(e.x>player.x+35)e.visible=false;
@@ -130,7 +131,6 @@ public final class Race implements GameScript {
         for(var e:c.scene().objects)if(kind(e).equals("bus-part")&&e.animations.containsKey("roll")&&winTime>2)c.animate(e,"roll");
         if(winTime>4){String[] parts=c.scene().id.split("-");int next=Integer.parseInt(parts[1])+1;int max=parts[0].equals("super")?3:5;c.changeScene(next<=max?parts[0]+"-"+next:"ending");}
     }
-    private static boolean near(Game.Entity a,Game.Entity b,double margin){return a.x+a.colliderOffsetX+a.colliderWidth>b.x-margin&&a.x+a.colliderOffsetX<b.x+b.width+margin&&a.y+a.colliderOffsetY+a.colliderHeight>b.y-margin&&a.y+a.colliderOffsetY<b.y+b.height+margin;}
     private static String kind(Game.Entity e){return e.properties.getOrDefault("kind","");}
     private static double approach(double from,double to,double amount){return from<to?Math.min(to,from+amount):Math.max(to,from-amount);}
     private void refresh(GameContext c){c.findHud("score").text=String.format(java.util.Locale.ROOT,"SCORE: %06d",score);c.findHud("time").text="TIME: "+(int)Math.ceil(time);}

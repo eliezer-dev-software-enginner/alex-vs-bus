@@ -63,3 +63,7 @@ Selecione a HUD e abra **Propriedades / condições HUD**. A aba **Propriedades*
 Em **Condição visual**, indique o nome de uma propriedade booleana, a imagem para `true`, a imagem para `false` e, opcionalmente, **Bloquear clique quando false**. Sem condição, a HUD continua usando a imagem padrão. Condições com propriedades inexistentes ou de outro tipo são rejeitadas antes de aplicar. A avaliação é a mesma no editor, no Desktop e no Android.
 
 Nos scripts Java, use `hud.booleanProperty("liberado", false)` para ler e `hud.setBooleanProperty("liberado", true)` para alterar o valor. As condições atualizam a imagem e a interação sem trocar manualmente o asset. O editor mostra os valores iniciais; o runtime usa uma cópia do documento, por isso o progresso do jogador não modifica a configuração autoral.
+
+No Alex vs Bus, todos os 4.495 objetos foram revisados: áreas explícitas para os sprites e colisores invisíveis; gatilhos ativados nos objetos interativos; decoração desativada. As áreas do jogador e dos obstáculos compostos foram preservadas. Jatos usam a faixa de 9 pixels do jogo original. A migração é repetível por `python3 tools/collision-areas.py` no projeto do jogo e também integra o gerador de fases.
+
+O Play do editor suporta as mesmas transferências JSON e controles físicos do jogo Desktop Linux. As opções de exportação/importação são HUDs comuns editáveis na cena `menu-settings`. O foco de navegação do controle é desenhado no Play; ele não modifica a definição das fases.

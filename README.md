@@ -95,3 +95,20 @@ bash tools/build.sh android-release
 Abra `build/android-release/project` no Android Studio e use **Build → Generate Signed Bundle / APK**, selecione `app`, seu keystore e a variante **release**. Escolha APK para distribuição direta ou AAB para Google Play. A exportação é independente da engine e contém os assets, scripts e ícone do jogo. Uma cópia anterior é preservada em backup ao exportar novamente.
 
 Os arquivos `game-release-unsigned.apk` e `game-release-unsigned.aab` são apenas validações sem assinatura; a distribuição exige os arquivos assinados pelo Studio. Incremente `versionCode` para cada atualização. Veja [o passo a passo completo](docs/ANDROID_RELEASE.md).
+
+Os objetos das fases possuem áreas de colisão explícitas, independentes das margens transparentes dos sprites. No editor, **Colisor** ativa o contato e **Gatilho** permite detectar esse contato sem criar uma parede (moedas, água, bananas, molas, cordas e buracos). Obstáculos sólidos mantêm o bloqueio físico. A água usa uma coluna de 9 pixels de largura; sprites decorativos não participam das colisões. Os scripts consultam as áreas configuradas no editor, inclusive para objetos criados durante o jogo.
+
+### Exportar e importar progresso
+
+Em **Configurações**, use **EXPORT SAVE JSON** para escolher onde salvar `alex-vs-bus-save.json`, ou **IMPORT SAVE JSON** para restaurar um arquivo exportado. O arquivo funciona entre Android e Desktop e leva as fases/dificuldades liberadas e as preferências de áudio, vídeo e controles. A importação substitui esses dados; arquivos de outro jogo ou com valores inválidos são recusados sem mudar o progresso atual. Cancelar o seletor também preserva os dados. A pontuação e a posição de uma corrida em andamento não são incluídas.
+
+### Controle GameSir / joystick
+
+Conecte por USB ou Bluetooth no modo de controle físico reconhecido pelo Android/Linux (HID/XInput, conforme o modelo):
+
+- **Analógico esquerdo ou direcional:** mover o jogador; nos menus, escolher uma opção.
+- **A:** confirmar nos menus ou pular na corrida.
+- **B:** voltar nos menus; durante a pausa, voltar ao menu principal.
+- **Start:** confirmar nos menus ou pausar/retomar a corrida.
+
+A opção selecionada nos menus recebe um contorno verde. Setas para cima no direcional não fazem o jogador pular. Teclado e botões de toque continuam disponíveis. O Desktop Linux também suporta controle no Play do editor. O backend precisa que o controle esteja reconhecido e acessível pelo sistema; a validação automatizada simula entradas, sem substituir o teste no seu GameSir físico.

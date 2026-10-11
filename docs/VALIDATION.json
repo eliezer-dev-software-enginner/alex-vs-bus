@@ -1,13 +1,13 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-11",
   "tests": {
     "build/test-results/test": {
-      "tests": 32,
+      "tests": 38,
       "failures": 0,
       "skipped": 1
     },
     "engine-core/build/test-results/test": {
-      "tests": 33,
+      "tests": 40,
       "failures": 0,
       "skipped": 0
     }
@@ -34,5 +34,13 @@
   "timeBonusNotice": "Gameplay tests verify + 15 seconds appears at each coin-score threshold, stays outside the world viewport and disappears after 1.5 seconds.",
   "landscapeOrientation": "Built APK manifest verified: sensorLandscape (6), configChanges orientation|screenSize (0x480).",
   "conditionalHud": "Typed boolean/number/text properties, shared asset conditions and disabled clicks. Native checkbox editing, copy isolation, invalid-condition validation and authored level unlock verified.",
-  "androidRelease": "Standalone Android Studio export compiled assembleRelease + bundleRelease, including lintVitalRelease. APK application ID, Unicode name, icon and version verified; APK/AAB are unsigned and require Android Studio signing. Python export tests passed (2)."
+  "androidRelease": "Standalone Android Studio export compiled assembleRelease + bundleRelease, including lintVitalRelease. APK application ID, Unicode name, icon and version verified; APK/AAB are unsigned and require Android Studio signing. Python export tests passed (2).",
+  "collisionAreas": {
+    "date": "2026-10-11",
+    "objectsReviewed": 4495,
+    "validation": "Full engine/editor suite passed; 14 gameplay tests passed, including water transparency and disabling its collider; 36 core tests passed; 2 Python migration tests passed. Desktop and Android debug builds succeeded.",
+    "semantics": "solid activates contact; trigger detects contact without blocking movement; scripts query collider areas rather than sprite dimensions."
+  },
+  "saveTransfer": "PASS: JSON export/import with progress and settings, score excluded, invalid and foreign-game data rejected before mutation. Desktop native file dialogs and Android document picker implemented. Updated Desktop and Android debug builds generated.",
+  "gamepad": "PASS: dead zone, hat/D-pad, release/disconnect, held-button scene protection, menu confirmation, jump and pause/resume tested with simulated input; Linux JNA backend loads. GameSir hardware not available for physical testing."
 }
