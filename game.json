@@ -2,7 +2,7 @@
   "version": 1,
   "name": "Alex vs Bus: The Race — Megalodonte",
   "entrySceneId": "menu",
-  "lastEditedSceneId": "normal-3",
+  "lastEditedSceneId": "normal-4",
   "versionCode": 1,
   "versionName": "0.1.0",
   "iconAssetPath": "assets/icon.png",
@@ -24,6 +24,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -238,6 +239,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -406,6 +408,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -630,6 +633,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -870,6 +874,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1006,6 +1011,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1168,6 +1174,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1330,6 +1337,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1518,6 +1526,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1654,6 +1663,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1764,6 +1774,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,
@@ -1900,6 +1911,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -20317,6 +20329,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -39947,6 +39960,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -52059,7 +52073,7 @@
           "assetPath": "assets/gush_top-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 140.09999999999994,
+          "x": 140.5999999999999,
           "y": 8.0,
           "width": 1.3333333333333333,
           "height": 0.3333333333333333,
@@ -52100,7 +52114,7 @@
           "assetPath": "assets/gush_middle-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 140.09999999999994,
+          "x": 140.5999999999999,
           "y": 7.0,
           "width": 1.3333333333333333,
           "height": 1.0,
@@ -55252,77 +55266,6 @@
           }
         },
         {
-          "id": "2e466fb6-9f8e-4c51-960e-5e3c0dfcd113",
-          "name": "gush",
-          "color": "#56b6c2",
-          "assetPath": "assets/gush_top-0.png",
-          "parentId": "",
-          "scriptClassName": "",
-          "x": 314.5000000000001,
-          "y": 8.0,
-          "width": 1.3333333333333333,
-          "height": 0.3333333333333333,
-          "speed": 4.0,
-          "rotation": 0.0,
-          "solid": true,
-          "trigger": true,
-          "player": false,
-          "visible": true,
-          "flipX": false,
-          "colliderFollowsFlip": true,
-          "colliderOffsetX": 0.125,
-          "colliderOffsetY": 0.0,
-          "colliderWidth": 0.375,
-          "colliderHeight": 0.3333333333333333,
-          "animations": {
-            "flow": {
-              "frames": [
-                "assets/gush_top-0.png",
-                "assets/gush_top-1.png",
-                "assets/gush_top-2.png"
-              ],
-              "fps": 10.0,
-              "loop": true
-            }
-          },
-          "animation": "flow",
-          "animationTime": 0.0,
-          "properties": {
-            "kind": "gush",
-            "baseY": "8.0"
-          }
-        },
-        {
-          "id": "bfe8469f-5a1e-4cf9-bd64-9ecbeab1dba3",
-          "name": "gush-body",
-          "color": "#56b6c2",
-          "assetPath": "assets/gush_middle-0.png",
-          "parentId": "",
-          "scriptClassName": "",
-          "x": 314.5000000000001,
-          "y": 7.0,
-          "width": 1.3333333333333333,
-          "height": 1.0,
-          "speed": 4.0,
-          "rotation": 0.0,
-          "solid": true,
-          "trigger": true,
-          "player": false,
-          "visible": true,
-          "flipX": false,
-          "colliderFollowsFlip": true,
-          "colliderOffsetX": 0.125,
-          "colliderOffsetY": 0.0,
-          "colliderWidth": 0.375,
-          "colliderHeight": 1.0,
-          "animations": {},
-          "animation": "",
-          "animationTime": 0.0,
-          "properties": {
-            "kind": "gush-body"
-          }
-        },
-        {
           "id": "b96b83b6-15cc-4773-b37f-14594b3f9114",
           "name": "Checkpoint",
           "color": "#56b6c2",
@@ -56321,7 +56264,7 @@
           "assetPath": "assets/banana_peel-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 367.6666666666667,
+          "x": 368.6666666666669,
           "y": 7.0,
           "width": 0.3333333333333333,
           "height": 0.3333333333333333,
@@ -57146,7 +57089,7 @@
           "assetPath": "assets/gush_top-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 402.0,
+          "x": 402.9000000000002,
           "y": 8.0,
           "width": 1.3333333333333333,
           "height": 0.3333333333333333,
@@ -57187,7 +57130,7 @@
           "assetPath": "assets/gush_middle-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 402.0,
+          "x": 402.9000000000002,
           "y": 7.0,
           "width": 1.3333333333333333,
           "height": 1.0,
@@ -57277,7 +57220,7 @@
           "assetPath": "assets/banana_peel-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 411.6666666666667,
+          "x": 412.46666666666687,
           "y": 7.0,
           "width": 0.3333333333333333,
           "height": 0.3333333333333333,
@@ -58418,6 +58361,88 @@
             "kind": "player",
             "goalScene": "3"
           }
+        },
+        {
+          "id": "e520396f-38e6-44f2-9c72-fa1f7700b14d",
+          "name": "coin-gold (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.69696969696972,
+          "y": 4.3143939393939394,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "aa1febd0-1097-4a78-beac-6393605f65fa",
+          "name": "coin-gold (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.65151515151516,
+          "y": 5.359848484848485,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
         }
       ],
       "hud": [
@@ -58829,6 +58854,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -73648,7 +73674,7 @@
           "assetPath": "assets/gush_top-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 253.0,
+          "x": 254.19999999999993,
           "y": 8.0,
           "width": 1.3333333333333333,
           "height": 0.3333333333333333,
@@ -73689,7 +73715,7 @@
           "assetPath": "assets/gush_middle-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 253.0,
+          "x": 254.19999999999993,
           "y": 7.0,
           "width": 1.3333333333333333,
           "height": 1.0,
@@ -76668,6 +76694,129 @@
             "kind": "player",
             "goalScene": "4"
           }
+        },
+        {
+          "id": "eba5836f-ae9c-4218-b308-1f4432b20c9a",
+          "name": "coin-gold (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 215.83333333333334,
+          "y": 5.166666666666667,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "181d0eb6-07fd-411b-b737-7c20ffe35746",
+          "name": "coin-gold (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 216.33333333333334,
+          "y": 5.666666666666667,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "3836a682-c533-41a1-9e1c-cd4b87b81fac",
+          "name": "coin-gold (cópia) (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 216.83333333333334,
+          "y": 6.166666666666667,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
         }
       ],
       "hud": [
@@ -77079,6 +77228,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -97120,6 +97270,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -117999,6 +118150,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -139002,6 +139154,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -157857,7 +158010,7 @@
           "assetPath": "assets/gush_top-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 402.0,
+          "x": 402.70000000000016,
           "y": 8.0,
           "width": 1.3333333333333333,
           "height": 0.3333333333333333,
@@ -157898,7 +158051,7 @@
           "assetPath": "assets/gush_middle-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 402.0,
+          "x": 402.70000000000016,
           "y": 7.0,
           "width": 1.3333333333333333,
           "height": 1.0,
@@ -157988,7 +158141,7 @@
           "assetPath": "assets/banana_peel-0.png",
           "parentId": "",
           "scriptClassName": "",
-          "x": 411.6666666666667,
+          "x": 411.96666666666675,
           "y": 7.0,
           "width": 0.3333333333333333,
           "height": 0.3333333333333333,
@@ -159260,6 +159413,252 @@
             "kind": "player",
             "goalScene": "3"
           }
+        },
+        {
+          "id": "db09c48a-fbcb-40b8-adf9-f33e912c1301",
+          "name": "coin-gold (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 354.5037878787879,
+          "y": 8.121212121212121,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "fbb35269-896e-427c-8824-261d16a315a7",
+          "name": "coin-gold (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 289.39015151515156,
+          "y": 8.428030303030305,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "be6e21a5-f256-4643-bda9-aab9e3dafae3",
+          "name": "coin-gold (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.6287878787879,
+          "y": 5.473484848484849,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "87e0119c-e0aa-468a-a6ae-8dbc120766d7",
+          "name": "coin-gold (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.51515151515153,
+          "y": 4.575757575757576,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "ee3d4271-b703-425a-985b-160c55c0ce37",
+          "name": "coin-gold (cópia) (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.469696969697,
+          "y": 3.712121212121213,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
+        },
+        {
+          "id": "ba8a7c70-1195-4319-951c-3791591f08c4",
+          "name": "coin-gold (cópia) (cópia) (cópia) (cópia)",
+          "color": "#56b6c2",
+          "assetPath": "assets/coin_gold-0.png",
+          "parentId": "",
+          "scriptClassName": "",
+          "x": 233.969696969697,
+          "y": 4.212121212121213,
+          "width": 0.3333333333333333,
+          "height": 0.3333333333333333,
+          "speed": 4.0,
+          "rotation": 0.0,
+          "solid": true,
+          "trigger": true,
+          "player": false,
+          "visible": true,
+          "flipX": false,
+          "colliderFollowsFlip": true,
+          "colliderOffsetX": 0.0,
+          "colliderOffsetY": 0.0,
+          "colliderWidth": 0.3333333333333333,
+          "colliderHeight": 0.3333333333333333,
+          "animations": {
+            "spin": {
+              "frames": [
+                "assets/coin_gold-0.png",
+                "assets/coin_gold-1.png",
+                "assets/coin_gold-2.png",
+                "assets/coin_gold-3.png"
+              ],
+              "fps": 10.0,
+              "loop": true
+            }
+          },
+          "animation": "spin",
+          "animationTime": 0.0,
+          "properties": {
+            "kind": "coin-gold"
+          }
         }
       ],
       "hud": [
@@ -159671,6 +160070,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -179577,6 +179977,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -201089,6 +201490,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -218092,6 +218494,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -235163,6 +235566,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 2.5,
+        "holdGroundDuringJump": false,
         "followSpeed": 12.0,
         "deadZoneWidth": 4.0,
         "deadZoneHeight": 1.0,
@@ -253868,6 +254272,7 @@
         "zoom": 1.0,
         "followOffsetX": 0.0,
         "followOffsetY": 0.0,
+        "holdGroundDuringJump": false,
         "followSpeed": 6.0,
         "deadZoneWidth": 0.0,
         "deadZoneHeight": 0.0,

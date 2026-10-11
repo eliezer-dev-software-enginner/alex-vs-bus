@@ -126,3 +126,5 @@ A opção selecionada nos menus recebe um contorno verde. Setas para cima no dir
 O colisor do Alex permanece estável ao virar para esquerda/direita ou mudar a largura do sprite durante uma animação. No editor, a opção **Espelhar colisor junto com o sprite** fica desativada no jogador para evitar que sua área física entre nas caixas ao mudar de direção.
 
 A câmera acompanha Alex também verticalmente nos trechos subterrâneos e ao retornar à rua. As fases usam zona morta vertical de 1 unidade, deslocamento vertical do alvo de 2,5 unidades e acompanhamento suave. A zona morta e a velocidade ficam no inspetor; o deslocamento do alvo fica em **Configurar cena**, pelo botão direito na lista de cenas.
+
+A opção **Cena / câmera → Manter chão enquadrado durante saltos** mantém a câmera vertical estável durante saltos comuns. Ela acompanha quedas e novos pisos ao aterrissar, e sobe quando necessário para manter o jogador no enquadramento. Está ativada nas fases de Alex vs Bus.
