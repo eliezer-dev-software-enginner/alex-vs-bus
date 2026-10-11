@@ -128,3 +128,5 @@ O colisor do Alex permanece estável ao virar para esquerda/direita ou mudar a l
 A câmera acompanha Alex também verticalmente nos trechos subterrâneos e ao retornar à rua. As fases usam zona morta vertical de 1 unidade, deslocamento vertical do alvo de 2,5 unidades e acompanhamento suave. A zona morta e a velocidade ficam no inspetor; o deslocamento do alvo fica em **Configurar cena**, pelo botão direito na lista de cenas.
 
 A opção **Cena / câmera → Manter chão enquadrado durante saltos** mantém a câmera vertical estável durante saltos comuns. Ela acompanha quedas e novos pisos ao aterrissar, e sobe quando necessário para manter o jogador no enquadramento. Está ativada nas fases de Alex vs Bus.
+
+Checkpoints só são ativados quando o ponto de retorno tem apoio no chão e espaço livre para o colisor do jogador. Se o apoio desaparecer, o respawn usa um checkpoint anterior seguro. Posicione o checkpoint antes da borda dos buracos no editor.

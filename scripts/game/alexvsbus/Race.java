@@ -72,7 +72,7 @@ public final class Race implements GameScript {
     private void interact(double dt,GameContext c){
         for(var e:List.copyOf(c.scene().objects)){
             String kind=kind(e);
-            if(kind.equals("checkpoint")){if(player.x>=e.x&&e.x>checkpointX){checkpointX=e.x;checkpointY=e.y;}continue;}
+            if(kind.equals("checkpoint")){if(player.x>=e.x&&e.x>checkpointX&&safeCheckpoint(c,e.x,e.y)){checkpointX=e.x;checkpointY=e.y;}continue;}
             if(kind.equals("hole")){if(c.overlaps(player,e)){respawn(c);return;}continue;}
             if(kind.startsWith("trigger-")){trigger(e,dt,c);continue;}
             if(!e.visible)continue;
@@ -107,7 +107,23 @@ public final class Race implements GameScript {
         if(hen&&invincible<=0&&c.overlaps(player,e)){hurt=.6;invincible=1.5;vx=-4;vy=6;c.animate(player,"hit");sound(c,"assets/hit.wav");}
         if(e.x>player.x+35)e.visible=false;
     }
+    private boolean safeCheckpoint(GameContext c,double x,double y){
+        double oldX=player.x,oldY=player.y,oldWidth=player.width;
+        try{
+            player.x=x;player.y=y;player.width=32.0/24;
+            if(!c.grounded(player))return false;
+            for(var other:c.scene().objects)if(other!=player&&other.solid&&
+                (!other.trigger||kind(other).equals("hole"))&&c.overlaps(player,other))return false;
+            return true;
+        }finally{player.x=oldX;player.y=oldY;player.width=oldWidth;}
+    }
     private void respawn(GameContext c){
+        if(!safeCheckpoint(c,checkpointX,checkpointY)){
+            double previousX=checkpointX;checkpointX=.125;checkpointY=7-1.0/6;
+            for(var marker:c.scene().objects)if(kind(marker).equals("checkpoint")&&marker.x<previousX&&marker.x>checkpointX&&safeCheckpoint(c,marker.x,marker.y)){
+                checkpointX=marker.x;checkpointY=marker.y;
+            }
+        }
         player.x=checkpointX;player.y=checkpointY;player.visible=true;player.width=32.0/24;vx=vy=0;ropeId="";lastRope="";respawnDelay=.5;invincible=1.5;c.animate(player,"stand");sound(c,"assets/fall.wav");
     }
     private void finish(double dt,GameContext c){
