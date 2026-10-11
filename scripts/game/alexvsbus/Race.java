@@ -11,9 +11,10 @@ public final class Race implements GameScript {
     private double vx,vy,time=90,clock,jumpBuffer,coyote,hurt,invincible,respawnDelay,checkpointX=.125,checkpointY=7-1.0/6,winTime,bonusSeconds;
     private int score,goalScene;
     private String phase="run",ropeId="",lastRope="";
-    private final Map<String,Double> springCooldown=new HashMap<>();
+    private final Map<String,Double> springCooldown=new HashMap<>(),ropeVelocity=new HashMap<>(),ropeOrigin=new HashMap<>();
     private void sound(GameContext c,String path){if(!c.state().getOrDefault("sfx","true").equals("false"))c.playSound(path);}
     @Override public void onStart(GameContext c){
+        for(var rope:c.scene().objects)if(kind(rope).equals("rope"))ropeOrigin.put(rope.id,Double.parseDouble(rope.properties.getOrDefault("startX",""+rope.x)));
         player=c.findObject("alex");bus=c.findObject("bus");score=Integer.parseInt(c.state().getOrDefault("score","0"));goalScene=Integer.parseInt(player.properties.get("goalScene"));
         c.mute(Boolean.parseBoolean(c.state().getOrDefault("muted","false")));c.pause(false);c.scene().musicVolume=c.state().getOrDefault("music","true").equals("false")?0:.55;
         for(String id:new String[]{"left","right","jump"})c.findHud(id).visible=!c.state().getOrDefault("touch","true").equals("false");
@@ -34,7 +35,7 @@ public final class Race implements GameScript {
         if(phase.equals("timeup")){bus.x+=dt*12;return;}
         if(phase.equals("win")){finish(dt,c);return;}
         if(c.actionPressed("escape")||c.actionPressed("pause")||c.actionPressed("pad_start")){phase="pause";overlay(c,"PAUSADO",true);c.pause(true);return;}
-        clock+=dt;time=Math.max(0,time-dt);
+        moveRopes(c,dt);clock+=dt;time=Math.max(0,time-dt);
         if(time<=0){phase="timeup";overlay(c,"TEMPO ESGOTADO! O ÔNIBUS PARTIU.",false);sound(c,"assets/time.wav");refresh(c);return;}
         if(time<10&&((int)(time+dt)!=(int)time))sound(c,"assets/time.wav");
         invincible=Math.max(0,invincible-dt);hurt=Math.max(0,hurt-dt);
@@ -45,8 +46,8 @@ public final class Race implements GameScript {
         jumpBuffer=jump?.2:Math.max(0,jumpBuffer-dt);
         boolean grounded=c.grounded(player);coyote=grounded?.1:Math.max(0,coyote-dt);
         if(!ropeId.isEmpty()){
-            var rope=c.findObject(ropeId);player.x+=10.75*dt;player.y=rope.y-1.1;c.animate(player,"rope");
-            if(jump||player.x>=Double.parseDouble(rope.properties.get("endX"))){lastRope=ropeId;ropeId="";vy=6.5;vx=8.75;c.animate(player,"jump");}
+            var rope=c.findObject(ropeId);player.x=rope.x-19.0/24;player.y=rope.y-1.1;c.animate(player,"rope");
+            if(jump||rope.x>=Double.parseDouble(rope.properties.get("endX"))){lastRope=ropeId;ropeId="";vy=6.5;vx=8.75;c.animate(player,"jump");}
         }else{
             if(hurt<=0){vx=approach(vx,direction*(direction<0?3.75:8.75),dt*(direction==0?10.5:9));if(direction!=0)player.flipX=direction<0;}
             if(jumpBuffer>0&&coyote>0&&hurt<=0){vy=6.5;jumpBuffer=0;coyote=0;grounded=false;}
@@ -69,6 +70,18 @@ public final class Race implements GameScript {
         }
         refresh(c);
     }
+    private void moveRopes(GameContext c,double dt){
+        for(String id:List.copyOf(ropeVelocity.keySet())){
+            var rope=c.findObject(id);double speed=ropeVelocity.get(id);
+            rope.x+=speed*dt;
+            double end=Double.parseDouble(rope.properties.get("endX"));
+            if(speed>0&&rope.x>=end){rope.x=end;ropeVelocity.put(id,-8.0);}
+            else if(speed<0&&rope.x<=ropeOrigin.get(id)){
+                rope.x=ropeOrigin.get(id);ropeVelocity.remove(id);
+                if(lastRope.equals(id)&&ropeId.isEmpty())lastRope="";
+            }
+        }
+    }
     private void interact(double dt,GameContext c){
         for(var e:List.copyOf(c.scene().objects)){
             String kind=kind(e);
@@ -83,7 +96,7 @@ public final class Race implements GameScript {
                 springCooldown.computeIfPresent(e.id,(id,value)->Math.max(0,value-dt));if(e.animationTime>.25)e.animation="";
                 if(c.overlaps(player,e,.08)&&vy<=0&&springCooldown.getOrDefault(e.id,0.0)<=0){vy=10.25;springCooldown.put(e.id,.4);c.animate(e,"bounce");e.animationTime=0;sound(c,"assets/spring.wav");}
             }else if(kind.equals("rope")&&!e.id.equals(lastRope)&&ropeId.isEmpty()&&hurt<=0&&c.overlaps(player,e)){
-                ropeId=e.id;vy=0;vx=10.75;c.animate(player,"rope");
+                ropeId=e.id;ropeVelocity.putIfAbsent(e.id,10.75);player.x=e.x-19.0/24;vy=0;vx=10.75;c.animate(player,"rope");
             }else if(kind.startsWith("coin")&&c.overlaps(player,e)){
                 e.visible=false;int before=score;score+=kind.equals("coin-gold")?100:50;int bonus=15*(score/1000-before/1000);time+=bonus;if(bonus>0){bonusSeconds=1.5;var notice=c.findHud("time-bonus");notice.text="+ "+bonus+" seconds";notice.visible=true;}sound(c,"assets/coin.wav");
             }else if(kind.equals("banana")){

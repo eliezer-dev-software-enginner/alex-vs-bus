@@ -88,10 +88,8 @@ def build_level(difficulty,index):
  scene['tileMaps'].append({'id':scene['id']+'-map','name':path.name,'columns':columns,'rows':18,'tileWidth':24,'tileHeight':24,'unitScale':1/24,'tiles':tiles,'layers':[{'name':'cidade','data':data}],'obstacles':[]})
  # Normal floor is grouped into broad collision strips; hole edges remain solid.
  start=None
- if index==3:
-  for col,kind in enumerate(types):
-   if kind==1:invisible(scene,col*24,264,12,168,'hole-edge')
-   elif kind==3:invisible(scene,col*24+14,264,10,168,'hole-edge')
+ for col,kind in enumerate(types):
+  if kind in (1,3):invisible(scene,col*24,264,24,168,'hole-edge')
  for col in range(columns+1):
   normal=col<columns and types[col]==0
   if normal and start is None:start=col
@@ -130,7 +128,7 @@ def build_level(difficulty,index):
    e=entity(sprite,px,224 if sprite=='HEN' else 184,cmd);e['visible']=False;e['properties']['triggerX']=str(px/24);anim(e,'move',sprite if sprite=='HEN' else 'CAR_WHEEL',10) if sprite=='HEN' else None
    scene['objects'].append(e)
   elif cmd=='rope':
-   e=entity('ROPE_VERTICAL',px+32,144,'rope');e['properties']['endX']=str((px+384)/24);scene['objects'].append(e)
+   e=entity('ROPE_VERTICAL',px+32,144,'rope');e['properties']['startX']=str(e['x']);e['properties']['endX']=str((px+384)/24);scene['objects'].append(e)
    for i in range(16):scene['objects'].append(entity('ROPE_HORIZONTAL_MIDDLE',px+24+i*24,144,'decoration'))
   elif cmd.startswith('passageway'):
    width=args[0]*24;invisible(scene,px+8,360,width-8,12,'passage-floor');invisible(scene,px+24,264,width-48,13,'passage-roof')

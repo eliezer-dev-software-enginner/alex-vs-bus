@@ -44,6 +44,17 @@ Ao concluir **cada build**, sua pasta abre automaticamente no explorador e o pro
 
 ## Editar os scripts
 
+Os scripts estão anexados às **cenas**, pelo campo `scriptClassName` em `game.json`. Atualmente, nenhum objeto de cenário nem elemento de HUD tem script anexado individualmente.
+
+| Cenas | Script anexado |
+| --- | --- |
+| 11 cenas de menus (`menu` e `menu-*`) | `game.alexvsbus.Menu` |
+| 13 fases (`normal-*`, `hard-*` e `super-*`) | `game.alexvsbus.Race` |
+| Cena final (`ending`) | `game.alexvsbus.Ending` |
+
+O `Race` identifica o jogador e o ônibus pelos IDs `alex` e `bus` e interpreta a propriedade `kind` dos demais objetos, como `checkpoint`, `rope`, `hole`, moedas e perigos. O `Menu` trata as ações dos botões da HUD e suas propriedades de configuração. Assim, um objeto pode ter comportamento durante o jogo mesmo com seu campo de script vazio: esse comportamento é controlado pelo script da cena.
+
+
 - `scripts/game/alexvsbus/Menu.java`: dificuldade, fase, controles e áudio.
 - `scripts/game/alexvsbus/Race.java`: física, colisões, moedas, perigos, cronômetro, checkpoints e progressão.
 - `scripts/game/alexvsbus/Ending.java`: sequência final.
@@ -131,4 +142,8 @@ A opção **Cena / câmera → Manter chão enquadrado durante saltos** mantém 
 
 Checkpoints só são ativados quando o ponto de retorno tem apoio no chão e espaço livre para o colisor do jogador. Se o apoio desaparecer, o respawn usa um checkpoint anterior seguro. Posicione o checkpoint antes da borda dos buracos no editor.
 
-A varredura de checkpoints cobre os 248 pontos das 13 fases: apoio no chão, espaço livre, ativação, queda e estabilidade após o respawn. O teste `AlexVsBusTest.allCheckpointsHaveStableRespawn`, no repositório da engine, verifica todos os pontos salvos em `game.json`. Checkpoints entre buracos consecutivos foram reposicionados nas próximas plataformas sólidas, nas fases Normal/Hard 4 e Normal 5. Nas versões da fase 3, a colisão das bordas dos buracos segue as faixas do original (12 pixels na entrada e 10 pixels na saída); os checkpoints desse trecho usam novamente a borda sólida.
+A varredura de checkpoints cobre os 248 pontos das 13 fases: apoio no chão, espaço livre, ativação, queda e estabilidade após o respawn. O teste `AlexVsBusTest.allCheckpointsHaveStableRespawn`, no repositório da engine, verifica todos os pontos salvos em `game.json`. Checkpoints entre buracos consecutivos foram reposicionados nas próximas plataformas sólidas, nas fases Normal/Hard 4 e Normal 5. Nas versões da fase 3, a colisão das bordas dos buracos cobre toda a coluna desenhada como borda sólida; os checkpoints desse trecho usam novamente a borda sólida.
+
+Todas as fases têm colisão cobrindo as colunas desenhadas como bordas dos buracos. O teste de gameplay verifica o apoio ao longo dessas bordas, incluindo as faixas estreitas entre buracos consecutivos das fases 3 e 4.
+
+A barra vertical da corda acompanha Alex durante a travessia e retorna ao ponto inicial depois, inclusive quando o jogador solta antes do fim. As propriedades `startX` e `endX` definem o percurso no editor.
