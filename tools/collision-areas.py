@@ -13,6 +13,8 @@ def configure(entity, root):
     # Decorative sprites do not gain physics just because they have an image.
     entity['solid'] = physical or contact
     entity['trigger'] = contact and kind != 'player' and not physical
+    if kind == 'player':
+        entity['colliderFollowsFlip'] = False
     if kind == 'player' and entity.get('colliderWidth', 0) > 0:
         return
     width, height = entity['width'], entity['height']

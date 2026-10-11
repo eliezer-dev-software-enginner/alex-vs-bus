@@ -139,7 +139,7 @@ def build_level(difficulty,index):
  player['properties']['goalScene']=str(metadata['goal-scene'])
  for name,sprite,fps,loop in [('stand','PLAYER_STAND',1,True),('walk','PLAYER_WALK',10,True),('jump','PLAYER_JUMP',1,True),('slip','PLAYER_SLIP',12,False),('hit','PLAYER_THROWBACK',15,False),('rope','PLAYER_GRABROPE',1,True),('run','PLAYER_RUN',12,True),('clean','PLAYER_CLEAN_DUNG',8,False)]:anim(player,name,sprite,fps,loop)
  scene['objects'].append(player)
- scene['camera']={'mode':'follow','targetId':'alex','x':10,'y':11.875,'width':20,'height':10.25,'viewportTop':64,'followSpeed':8,'deadZoneWidth':4,'deadZoneHeight':30,'fadeSeconds':.5}
+ scene['camera']={'mode':'follow','targetId':'alex','x':10,'y':11.875,'width':20,'height':10.25,'viewportTop':64,'followSpeed':12,'followOffsetY':2.5,'deadZoneWidth':4,'deadZoneHeight':1,'fadeSeconds':.5}
  return scene
 
 scenes=[build_level(d,i) for d,count in [('normal',5),('hard',5),('super',3)] for i in range(1,count+1)]

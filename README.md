@@ -86,7 +86,17 @@ Os botões de fase e dificuldade usam a propriedade booleana **`liberado`**. No 
 
 ## Release Android
 
-No editor, configure **Projeto → Código da versão Android / Versão exibida** e clique em **Android Release**. Pelo terminal:
+Para gerar o APK assinado pela interface:
+
+1. Na barra superior da engine, clique em **Configurações → Android**. Informe a pasta do SDK (por exemplo, `/home/eliezer/Android/Sdk`) e clique em **Salvar configurações**.
+2. Em **Projeto**, configure **Código da versão Android (versionCode)** e **Versão exibida (versionName)**.
+3. Clique em **Projeto Android**, na barra superior, e aguarde concluir. A engine salva o jogo, atualiza o projeto exportado com os assets, scripts e runtime atuais e abre sua pasta no gerenciador de arquivos.
+4. No Android Studio, clique em **Open** e selecione `build/android-release/project`, dentro da pasta deste jogo. Aguarde a sincronização do Gradle; `local.properties` já aponta para o SDK configurado na engine.
+5. Vá em **Build → Generate Signed Bundle / APK**, escolha **APK**, o módulo `app`, seu keystore/alias e a variante **release**. Conclua para gerar o APK assinado.
+
+Depois de qualquer alteração no jogo ou na engine, clique novamente em **Projeto Android** antes de gerar outra release. Compilar diretamente a cópia exportada não traz as mudanças do projeto original. Reutilize a mesma chave de assinatura nas atualizações.
+
+Também é possível preparar a exportação pelo terminal:
 
 ```bash
 bash tools/build.sh android-release
@@ -94,7 +104,7 @@ bash tools/build.sh android-release
 
 Abra `build/android-release/project` no Android Studio e use **Build → Generate Signed Bundle / APK**, selecione `app`, seu keystore e a variante **release**. Escolha APK para distribuição direta ou AAB para Google Play. A exportação é independente da engine e contém os assets, scripts e ícone do jogo. Uma cópia anterior é preservada em backup ao exportar novamente.
 
-Os arquivos `game-release-unsigned.apk` e `game-release-unsigned.aab` são apenas validações sem assinatura; a distribuição exige os arquivos assinados pelo Studio. Incremente `versionCode` para cada atualização. Veja [o passo a passo completo](docs/ANDROID_RELEASE.md).
+As saídas internas da compilação de validação não têm assinatura; a distribuição exige os arquivos assinados pelo Studio. Incremente `versionCode` para cada atualização. Veja [o passo a passo completo](docs/ANDROID_RELEASE.md).
 
 Os objetos das fases possuem áreas de colisão explícitas, independentes das margens transparentes dos sprites. No editor, **Colisor** ativa o contato e **Gatilho** permite detectar esse contato sem criar uma parede (moedas, água, bananas, molas, cordas e buracos). Obstáculos sólidos mantêm o bloqueio físico. A água usa uma coluna de 9 pixels de largura; sprites decorativos não participam das colisões. Os scripts consultam as áreas configuradas no editor, inclusive para objetos criados durante o jogo.
 
@@ -112,3 +122,7 @@ Conecte por USB ou Bluetooth no modo de controle físico reconhecido pelo Androi
 - **Start:** confirmar nos menus ou pausar/retomar a corrida.
 
 A opção selecionada nos menus recebe um contorno verde. Setas para cima no direcional não fazem o jogador pular. Teclado e botões de toque continuam disponíveis. O Desktop Linux também suporta controle no Play do editor. O backend precisa que o controle esteja reconhecido e acessível pelo sistema; a validação automatizada simula entradas, sem substituir o teste no seu GameSir físico.
+
+O colisor do Alex permanece estável ao virar para esquerda/direita ou mudar a largura do sprite durante uma animação. No editor, a opção **Espelhar colisor junto com o sprite** fica desativada no jogador para evitar que sua área física entre nas caixas ao mudar de direção.
+
+A câmera acompanha Alex também verticalmente nos trechos subterrâneos e ao retornar à rua. As fases usam zona morta vertical de 1 unidade, deslocamento vertical do alvo de 2,5 unidades e acompanhamento suave. A zona morta e a velocidade ficam no inspetor; o deslocamento do alvo fica em **Configurar cena**, pelo botão direito na lista de cenas.

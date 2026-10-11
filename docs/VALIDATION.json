@@ -42,5 +42,17 @@
     "semantics": "solid activates contact; trigger detects contact without blocking movement; scripts query collider areas rather than sprite dimensions."
   },
   "saveTransfer": "PASS: JSON export/import with progress and settings, score excluded, invalid and foreign-game data rejected before mutation. Desktop native file dialogs and Android document picker implemented. Updated Desktop and Android debug builds generated.",
-  "gamepad": "PASS: dead zone, hat/D-pad, release/disconnect, held-button scene protection, menu confirmation, jump and pause/resume tested with simulated input; Linux JNA backend loads. GameSir hardware not available for physical testing."
+  "gamepad": "PASS: dead zone, hat/D-pad, release/disconnect, held-button scene protection, menu confirmation, jump and pause/resume tested with simulated input; Linux JNA backend loads. GameSir hardware not available for physical testing.",
+  "crateEdgeRegression": {
+    "date": "2026-10-11",
+    "reproduction": "Turning away from a crate reproduced a failing gameplay test before the fix.",
+    "fix": "Player colliderFollowsFlip=false keeps the physical body independent of sprite facing and width.",
+    "tests": "Gameplay suite passed; extra tests verify gravity on both crate sides and stable bounds across facing and animation width. 41 core tests passed."
+  },
+  "undergroundCamera": {
+    "date": "2026-10-11",
+    "fix": "All 13 race scenes use vertical dead zone 1, target offset Y=2.5 and follow speed 12. Offset is editable in scene settings.",
+    "tests": "Gameplay suite passed (19); physical pushable crate movement, descent into passage, full player visibility and return to surface passed. 42 core tests passed."
+  },
+  "engineSdkSettings": "Settings page contains SDK input and folder picker. Persistent machine preference drives Android build environment and exported local.properties; existing export updated on save. Invalid paths rejected and unrelated properties preserved. Native page and persistence tests passed."
 }
