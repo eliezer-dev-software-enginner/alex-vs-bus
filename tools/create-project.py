@@ -143,6 +143,15 @@ def build_level(difficulty,index):
  return scene
 
 scenes=[build_level(d,i) for d,count in [('normal',5),('hard',5),('super',3)] for i in range(1,count+1)]
+# Consecutive holes leave some original checkpoints without a landing platform.
+for scene in scenes:
+ if scene['id'] in ('normal-3','hard-3','normal-4','hard-4','normal-5'):
+  for obj in scene['objects']:
+   if obj.get('properties',{}).get('kind')!='checkpoint':continue
+   fixes={'normal-3':(360.125,367.125),'hard-3':(360.125,367.125),'normal-4':(120.125,128.125),'hard-4':(120.125,128.125),'normal-5':(25.125,31.125)}
+   old,new=fixes[scene['id']]
+   if abs(obj['x']-old)<.01:obj['x']=new
+
 import importlib.util
 spec=importlib.util.spec_from_file_location('menu_assets',ROOT/'tools/menu-assets.py');ui=importlib.util.module_from_spec(spec);spec.loader.exec_module(ui)
 menu={'id':'menu','name':'Alex vs Bus • título','worldWidth':20,'worldHeight':11.25,'background':'#000000','scriptClassName':'game.alexvsbus.Menu','musicAssetPath':'assets/bgmtitle.mp3','musicVolume':.5,'camera':{'x':10,'y':5.625,'width':20,'height':11.25},'objects':[],'hud':ui.menus(hud)}

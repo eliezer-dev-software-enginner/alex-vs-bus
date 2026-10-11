@@ -130,3 +130,5 @@ A câmera acompanha Alex também verticalmente nos trechos subterrâneos e ao re
 A opção **Cena / câmera → Manter chão enquadrado durante saltos** mantém a câmera vertical estável durante saltos comuns. Ela acompanha quedas e novos pisos ao aterrissar, e sobe quando necessário para manter o jogador no enquadramento. Está ativada nas fases de Alex vs Bus.
 
 Checkpoints só são ativados quando o ponto de retorno tem apoio no chão e espaço livre para o colisor do jogador. Se o apoio desaparecer, o respawn usa um checkpoint anterior seguro. Posicione o checkpoint antes da borda dos buracos no editor.
+
+A varredura de checkpoints cobre os 248 pontos das 13 fases: apoio no chão, espaço livre, ativação, queda e estabilidade após o respawn. O teste `AlexVsBusTest.allCheckpointsHaveStableRespawn`, no repositório da engine, verifica todos os pontos salvos em `game.json`. Checkpoints entre buracos consecutivos foram reposicionados nas próximas plataformas sólidas, incluindo Normal/Hard fase 3, Normal/Hard fase 4 e Normal fase 5.
