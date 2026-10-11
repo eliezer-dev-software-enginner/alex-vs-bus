@@ -86,8 +86,12 @@ def build_level(difficulty,index):
    data[row*columns+col]=block+1
  # Shared map DTO: scenery is visible through the engine's ordinary tile renderer.
  scene['tileMaps'].append({'id':scene['id']+'-map','name':path.name,'columns':columns,'rows':18,'tileWidth':24,'tileHeight':24,'unitScale':1/24,'tiles':tiles,'layers':[{'name':'cidade','data':data}],'obstacles':[]})
- # Normal floor is grouped into broad collision strips; holes have no floor.
+ # Normal floor is grouped into broad collision strips; hole edges remain solid.
  start=None
+ if index==3:
+  for col,kind in enumerate(types):
+   if kind==1:invisible(scene,col*24,264,12,168,'hole-edge')
+   elif kind==3:invisible(scene,col*24+14,264,10,168,'hole-edge')
  for col in range(columns+1):
   normal=col<columns and types[col]==0
   if normal and start is None:start=col
@@ -143,12 +147,13 @@ def build_level(difficulty,index):
  return scene
 
 scenes=[build_level(d,i) for d,count in [('normal',5),('hard',5),('super',3)] for i in range(1,count+1)]
-# Consecutive holes leave some original checkpoints without a landing platform.
+# Levels without imported edge colliders need checkpoint relocation.
 for scene in scenes:
  if scene['id'] in ('normal-3','hard-3','normal-4','hard-4','normal-5'):
   for obj in scene['objects']:
    if obj.get('properties',{}).get('kind')!='checkpoint':continue
-   fixes={'normal-3':(360.125,367.125),'hard-3':(360.125,367.125),'normal-4':(120.125,128.125),'hard-4':(120.125,128.125),'normal-5':(25.125,31.125)}
+   fixes={'normal-4':(120.125,128.125),'hard-4':(120.125,128.125),'normal-5':(25.125,31.125)}
+   if scene['id'] not in fixes:continue
    old,new=fixes[scene['id']]
    if abs(obj['x']-old)<.01:obj['x']=new
 
