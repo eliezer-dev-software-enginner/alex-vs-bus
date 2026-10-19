@@ -19,7 +19,7 @@ Há 90 segundos para chegar à porta do ônibus. Moedas de prata valem 50 e de o
 
 Os menus reproduzem o fundo preto, a tipografia de 8 pixels, os ícones e as bordas do atlas original. Há telas separadas de dificuldade, fase, configurações, vídeo, áudio, tamanho virtual, jukebox, sobre, créditos e confirmação de saída.
 
-Áudio, música e efeitos podem ser alternados separadamente. A jukebox reproduz as quatro músicas. Vídeo permite alternar scanlines e escolher a largura/altura virtual; no modo fixo as dimensões são aplicadas à câmera da corrida. Os botões de toque podem ser ocultados; as zonas de toque continuam funcionando (parte superior para salto). As preferências duram a sessão atual. Todas as dificuldades/fases ficam acessíveis para testar a engine; o cinza de Hard/Super reproduz a aparência da referência, sem bloquear a seleção.
+Áudio, música e efeitos podem ser alternados separadamente. A jukebox reproduz as quatro músicas. Vídeo permite alternar scanlines e escolher a largura/altura virtual; no modo fixo as dimensões são aplicadas à câmera da corrida. Os botões de toque podem ser ocultados; as zonas de toque continuam funcionando (parte superior para salto). As preferências são salvas no dispositivo. Normal/fase 1 começa liberada; as demais fases e dificuldades são liberadas com o progresso.
 
 Os submenus são editáveis sem executar scripts: suas posições, imagens e ações estão nas HUDs das cenas `menu-*`. A UI é declarativa em `game.json`; `tools/menu-assets.py` compõe os PNGs usando os sprites e caracteres originais, sem depender de fontes instaladas no celular. Os textos das telas Sobre/Créditos identificam a origem e a adaptação.
 
@@ -73,7 +73,7 @@ python3 tools/create-project.py --force
 
 ## Diferenças da adaptação
 
-As fases, sprites, sons e músicas são os originais. A física foi convertida para unidades de mundo e colisões AABB; curvas de veículos são aproximadas por retângulos. As cinco cenas de chegada e o final preservam a ideia do original com sequências simplificadas. As fases são liberadas conforme o progresso salvo do jogador. Não há suporte dedicado a gamepad, opção AZERTY ou as opções de escala de janela do original. Os menus usam a fonte bitmap, ícones e bordas originais; o HUD durante a corrida ainda usa textos nativos dos hosts. O editor da engine continua separado do executável do jogo.
+As fases, sprites, sons e músicas são os originais. A física foi convertida para unidades de mundo e colisões AABB; curvas de veículos são aproximadas por retângulos. As cinco cenas de chegada e o final preservam a ideia do original com sequências simplificadas. As fases são liberadas conforme o progresso salvo do jogador. Não há opção AZERTY ou as opções de escala de janela do original. Os menus usam a fonte bitmap, ícones e bordas originais; o HUD durante a corrida ainda usa textos nativos dos hosts. O editor da engine continua separado do executável do jogo.
 
 ## Créditos e licenças
 
@@ -99,7 +99,7 @@ Os botões de fase e dificuldade usam a propriedade booleana **`liberado`**. No 
 
 Para gerar o APK assinado pela interface:
 
-1. Na barra superior da engine, clique em **Configurações → Android**. Informe a pasta do SDK (por exemplo, `/home/eliezer/Android/Sdk`) e clique em **Salvar configurações**.
+1. Na barra superior da engine, clique em **Configurações → Android**. Informe a pasta do SDK (por exemplo, `/caminho/para/Android/Sdk`) e clique em **Salvar configurações**.
 2. Em **Projeto**, configure **Código da versão Android (versionCode)** e **Versão exibida (versionName)**.
 3. Clique em **Projeto Android**, na barra superior, e aguarde concluir. A engine salva o jogo, atualiza o projeto exportado com os assets, scripts e runtime atuais e abre sua pasta no gerenciador de arquivos.
 4. No Android Studio, clique em **Open** e selecione `build/android-release/project`, dentro da pasta deste jogo. Aguarde a sincronização do Gradle; `local.properties` já aponta para o SDK configurado na engine.
