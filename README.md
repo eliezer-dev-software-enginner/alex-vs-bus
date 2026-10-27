@@ -2,7 +2,7 @@
 
 Adaptação jogável de [Alex vs Bus](https://github.com/M374LX/alexvsbus) para **Megalodonte Engine 2D**, com as 13 fases originais: 5 Normal, 5 Difícil e 3 Super. O projeto é aberto e editável pela engine; gameplay fica nos scripts Java, sem lógica específica de Alex dentro do núcleo.
 
-Abra **game.json** na engine e clique **Play**. A cena inicial é o menu. A cena em edição é o título. Cada submenu é uma cena independente, com sua própria HUD visível; use Próxima cena para percorrer título, dificuldade, seleção de fase, configurações, vídeo, áudio, tamanho virtual, jukebox, sobre, créditos e saída. Depois vêm as 13 fases e o final.
+Para abrir ou exportar o jogo, é necessária uma instalação separada da **Megalodonte Engine 2D**; ela não está incluída neste repositório. Abra **game.json** na engine e clique **Play**. A cena inicial é o menu. A cena em edição é o título. Cada submenu é uma cena independente, com sua própria HUD visível; use Próxima cena para percorrer título, dificuldade, seleção de fase, configurações, vídeo, áudio, tamanho virtual, jukebox, sobre, créditos e saída. Depois vêm as 13 fases e o final.
 
 ## Jogar
 
@@ -34,9 +34,9 @@ bash tools/build.sh android
 bash tools/build.sh all
 ```
 
-O script encontra a engine na estrutura local megalodonte-world. Em outra estrutura, configure `MEGALODONTE_ENGINE=/caminho/megalodonte-engine`.
+O script procura a engine em `../../applications/megalodonte-engine`, em relação à pasta deste jogo. Em outra estrutura, informe o caminho da instalação, por exemplo `MEGALODONTE_ENGINE=/caminho/megalodonte-engine bash tools/build.sh desktop`. Os requisitos de JDK e SDK dos exportadores dependem da engine instalada; consulte a documentação dessa instalação.
 
-Desktop nesta máquina: **Linux x86_64**, aplicativo independente com Java e JavaFX incluídos. Rode `build/desktop/alexvsbus/bin/alexvsbus`. A versão compactada está em `build/desktop/alexvsbus-linux-x86_64.tar.gz`; extraia antes de executar. Também pode iniciar o binário de qualquer diretório: o jogo é localizado junto ao aplicativo.
+Para uma build Desktop em **Linux x86_64**, o aplicativo inclui Java e JavaFX. Após gerar a build, rode `build/desktop/alexvsbus/bin/alexvsbus`. A versão compactada fica em `build/desktop/alexvsbus-linux-x86_64.tar.gz`; extraia antes de executar. Também pode iniciar o binário de qualquer diretório: o jogo é localizado junto ao aplicativo.
 
 Android: `build/android/game-debug.apk`, com pacote próprio `megalodonte.games.alexvsbus`, SDK/mínimo API 35. É uma build debug instalável; não substitui o pacote padrão de demonstração da engine. O JDK/SDK usados pelo exportador são documentados no README da engine.
 
@@ -59,7 +59,7 @@ O `Race` identifica o jogador e o ônibus pelos IDs `alex` e `bus` e interpreta 
 - `scripts/game/alexvsbus/Race.java`: física, colisões, moedas, perigos, cronômetro, checkpoints e progressão.
 - `scripts/game/alexvsbus/Ending.java`: sequência final.
 
-Na engine, selecione a cena e use Script da cena. Abrir IDE gera/atualiza as bibliotecas locais. O projeto Gradle gerado usa Java 17; é possível executar `bash gradlew compileJava` após preparar a IDE. A engine recompila ao iniciar Play, e os exportadores compilam os scripts para Desktop/DEX Android.
+Na engine, selecione a cena e use Script da cena. Abrir IDE gera/atualiza as bibliotecas locais em `.engine/lib`, exigidas por `build.gradle.kts`. O projeto Gradle usa Java 17; é possível executar `bash gradlew compileJava` após preparar a IDE e ter um JDK 17 instalado. A engine recompila ao iniciar Play, e os exportadores compilam os scripts para Desktop/DEX Android.
 
 ## Fontes, assets e reprodução
 
