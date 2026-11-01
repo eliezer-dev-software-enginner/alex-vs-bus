@@ -1,5 +1,7 @@
 # Alex vs Bus: The Race — Megalodonte
 
+![Ícone de Alex vs Bus: The Race — Megalodonte](assets/icon.png)
+
 Adaptação jogável de [Alex vs Bus](https://github.com/M374LX/alexvsbus) para **Megalodonte Engine 2D**, com as 13 fases originais: 5 Normal, 5 Difícil e 3 Super. O projeto é aberto e editável pela engine; gameplay fica nos scripts Java, sem lógica específica de Alex dentro do núcleo.
 
 Para abrir ou exportar o jogo, é necessária uma instalação separada da **Megalodonte Engine 2D**; ela não está incluída neste repositório. Abra **game.json** na engine e clique **Play**. A cena inicial é o menu. A cena em edição é o título. Cada submenu é uma cena independente, com sua própria HUD visível; use Próxima cena para percorrer título, dificuldade, seleção de fase, configurações, vídeo, áudio, tamanho virtual, jukebox, sobre, créditos e saída. Depois vêm as 13 fases e o final.
